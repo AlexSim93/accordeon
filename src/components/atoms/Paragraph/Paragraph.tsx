@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { color } from 'styled-system';
 
 export interface PropsParagraph extends React.HTMLAttributes<HTMLElement> {
     fontStyle?: any;
@@ -8,7 +9,7 @@ export interface PropsParagraph extends React.HTMLAttributes<HTMLElement> {
   }
 
 export const Paragraph = styled.p<PropsParagraph>`
-    color: red;
+    ${color}
 `;
 
 Paragraph.displayName = 'Paragraph';
