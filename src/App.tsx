@@ -1,8 +1,11 @@
 import React from 'react';
+import { Paragraph } from './components/atoms/Paragraph';
 
 function App() {
   return (
-    <div />
+    <Paragraph>
+      DSJKHFDSJFDSJKFHKJSDFHSDJFHDKSJHFD
+    </Paragraph>
   );
 }
 
