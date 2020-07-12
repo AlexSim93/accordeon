@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Box } from 'reflexbox';
+import styled from 'styled-components';
 import { Accordion } from '../../molecules/Accordion';
 
 type Props = {
@@ -13,6 +14,12 @@ type AccordionRenderProps = {
   title: string;
   description: string;
 };
+
+const MarkDownDescription = styled(ReactMarkdown)`
+  & > p {
+    margin: 0;
+  }
+`;
 
 export const AccordionGroup: React.FC<Props> = ({
   initiallyExpanded,
@@ -30,7 +37,7 @@ export const AccordionGroup: React.FC<Props> = ({
                 expanded={index === expandedIndex}
                 onToggle={(state: boolean) => changeExpandedIndex(state ? -1 : index)}
               >
-                <ReactMarkdown source={description} />
+                <MarkDownDescription source={description} />
               </Accordion>
             </Box>
           ),
