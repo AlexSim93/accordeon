@@ -1,1 +1,1 @@
-export default { acc: 111 };
+export { default as Chevron } from './chevron_down.svg';
