@@ -9,6 +9,7 @@ type Props = {
 };
 
 type AccordionRenderProps = {
+  id: string;
   title: string;
   description: string;
 };
@@ -22,14 +23,16 @@ export const AccordionGroup: React.FC<Props> = ({
     <Box as="section">
       {Array.isArray(content)
         && content.map(
-          ({ title, description }: AccordionRenderProps, index: number) => (
-            <Accordion
-              title={title}
-              expanded={index === expandedIndex}
-              onToggle={(state: boolean) => changeExpandedIndex(state ? -1 : index)}
-            >
-              <ReactMarkdown source={description} />
-            </Accordion>
+          ({ id, title, description }: AccordionRenderProps, index: number) => (
+            <Box key={id} mb={16}>
+              <Accordion
+                title={title}
+                expanded={index === expandedIndex}
+                onToggle={(state: boolean) => changeExpandedIndex(state ? -1 : index)}
+              >
+                <ReactMarkdown source={description} />
+              </Accordion>
+            </Box>
           ),
         )}
     </Box>

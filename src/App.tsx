@@ -7,8 +7,8 @@ import GlobalFont from './assets/fonts/GlobalFont';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <GlobalFont />
       <Faq />
+      <GlobalFont />
     </ThemeProvider>
   );
 }

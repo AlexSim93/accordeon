@@ -5,5 +5,5 @@ import { useContent } from '../../utils/hooks/useContent';
 export const Faq = () => {
   const { content } = useContent('faqs');
   console.log(content);
-  return <AccordionGroup content={content} initiallyExpanded={0} />;
+  return <div style={{ backgroundColor: '#080D26' }}><AccordionGroup content={content} initiallyExpanded={0} /></div>;
 };

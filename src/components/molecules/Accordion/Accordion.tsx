@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import { Chevron } from '../../../assets/icons';
 import { ICON_SIZE, Icon } from '../../atoms/Icon';
 
-const COLLAPSE_DURATION = 0.3;
-
 type Props = {
   title: string;
   expanded?: boolean;
@@ -22,16 +20,27 @@ interface PropsDescription {
   shouldBeExpanded: boolean;
 }
 
+const AccordionContainer = styled(Box)`
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  border-radius: 4px;
+  background-color: rgba(103, 107, 139, 0.16);
+`;
+
 const AnimatedChevron = styled(Box)<PropsAnimatedChevron>`
   transform: rotate(${({ shouldBeExpanded }) => (shouldBeExpanded ? '180deg' : '360deg')});
-  transition: transform ${COLLAPSE_DURATION}s;
+  transform-origin: 50% 50%;
 `;
 
 const TitleContainer = styled(Flex)`
   padding: 16px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
+  
+  font-weight: 600;
+  
+  color: #FFFFFF;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const Title = styled(Box)`
@@ -39,8 +48,10 @@ const Title = styled(Box)`
 `;
 
 const DescriptionContainer = styled(Box)<PropsDescription>`
-  transform: scaleY(${({ shouldBeExpanded }) => (shouldBeExpanded ? 1 : 0)});
-  transition: transform ${COLLAPSE_DURATION}s;
+  display: ${({ shouldBeExpanded }) => (shouldBeExpanded ? 'block' : 'none')};
+  border-top: 1px solid rgba(8, 13, 38, 0.48);
+  font-weight: 500;
+  color: #A7A7C8;
 `;
 
 export const Accordion: React.FC<Props> = ({
@@ -60,17 +71,18 @@ export const Accordion: React.FC<Props> = ({
   const shouldBeExpanded = typeof expanded === 'boolean' ? expanded : isExpanded;
 
   return (
-    <Box>
+    <AccordionContainer>
       <TitleContainer flexDirection="row" onClick={handleToggleAccordion}>
         <Title flexGrow={1}>{title}</Title>
         <AnimatedChevron shouldBeExpanded={shouldBeExpanded}>
           <Icon
             type={Chevron}
             size={ICON_SIZE.s}
+            fill="#C4C4C4"
           />
         </AnimatedChevron>
       </TitleContainer>
-      <DescriptionContainer shouldBeExpanded={shouldBeExpanded}>{children}</DescriptionContainer>
-    </Box>
+      <DescriptionContainer p={16} shouldBeExpanded={shouldBeExpanded}>{children}</DescriptionContainer>
+    </AccordionContainer>
   );
 };
