@@ -5,3 +5,5 @@ export const Divider = styled.div<any>`
     ${layout};
     ${color}
 `;
+
+Divider.displayName = 'Divider';
