@@ -20,10 +20,6 @@ type ComponentProps = {
 
 const IconComponent = styled.span<ComponentProps>`
   display: inline-block;
-  height: ${({ size }) => size}px;
-  min-height: ${({ size }) => size}px;
-  width: ${({ size }) => size}px;
-  min-width: ${({ size }) => size}px;
 `;
 
 const replaceFillInSVG = (code: string, fill: string) => (fill !== 'none'

@@ -3,7 +3,7 @@ import { Flex, Box } from 'reflexbox';
 import noop from 'lodash/noop';
 import styled from 'styled-components';
 import {
-  color, typography, space, border,
+  color, typography, space, border, flexbox,
 } from 'styled-system';
 import { Chevron } from '../../../assets/icons';
 import { ICON_SIZE, Icon } from '../../atoms/Icon';
@@ -56,6 +56,12 @@ const DescriptionContainer = styled(Box)<any>`
   ${border}
 `;
 
+const StyledTitle = styled.div<any>`
+  ${space}
+  ${color}
+  ${flexbox}
+`;
+
 export const Accordion: React.FC<Props> = ({
   title,
   initiallyExpanded = false,
@@ -84,9 +90,9 @@ export const Accordion: React.FC<Props> = ({
         fontSize={['s', 'm', 'm']}
         onClick={handleToggleAccordion}
       >
-        <Box color="white" mr="s" flexGrow={1}>
+        <StyledTitle color="white" mr="s" flexGrow={1}>
           {title}
-        </Box>
+        </StyledTitle>
         <AnimatedChevron shouldBeExpanded={shouldBeExpanded}>
           <Icon type={Chevron} size={ICON_SIZE.s} fill="#C4C4C4" />
         </AnimatedChevron>
