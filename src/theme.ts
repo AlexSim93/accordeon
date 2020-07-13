@@ -18,9 +18,6 @@ export default {
     neutralDarkGrey: '#C4C4C4', // icon
     darkBlue: '#080D26', // page bg
   },
-  borders: {
-    solidLight: '1px solid',
-  },
   fonts: {
     Montserrat: '"Montserrat", sans-serif',
   },

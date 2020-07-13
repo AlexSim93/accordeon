@@ -7,6 +7,7 @@ import {
 } from 'styled-system';
 import { Chevron } from '../../../assets/icons';
 import { ICON_SIZE, Icon } from '../../atoms/Icon';
+import { Divider } from '../../atoms/Divider';
 
 type Props = {
   title: string;
@@ -53,7 +54,6 @@ const DescriptionContainer = styled(Box)<any>`
   ${space}
   ${color}
   font-weight: 500;
-  ${border}
 `;
 
 const StyledTitle = styled.div<any>`
@@ -97,13 +97,12 @@ export const Accordion: React.FC<Props> = ({
           <Icon type={Chevron} size={ICON_SIZE.s} fill="#C4C4C4" />
         </AnimatedChevron>
       </TitleContainer>
+      {shouldBeExpanded && <Divider height={1} bg="blackPearlLighten48" />}
       <DescriptionContainer
         color="medianGrey"
         px="m"
         pt="m"
         pb={['m', 'l', 'l']}
-        borderTop="solidLight"
-        borderColor="blackPearlLighten48"
         shouldBeExpanded={shouldBeExpanded}
       >
         {children}
