@@ -21,10 +21,8 @@ type ComponentProps = {
 const IconComponent = styled.span<ComponentProps>`
   display: inline-block;
   height: ${({ size }) => size}px;
-  // для фиксации height в IE
   min-height: ${({ size }) => size}px;
   width: ${({ size }) => size}px;
-  // для фиксации width в IE
   min-width: ${({ size }) => size}px;
 `;
 

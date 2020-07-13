@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { Flex, Box } from 'reflexbox';
 import noop from 'lodash/noop';
 import styled from 'styled-components';
-import { color, typography } from 'styled-system';
+import { color, typography, space } from 'styled-system';
 import { Chevron } from '../../../assets/icons';
 import { ICON_SIZE, Icon } from '../../atoms/Icon';
 
@@ -22,21 +22,24 @@ interface PropsDescription {
 }
 
 const AccordionContainer = styled(Box)`
-  font-family: 'Montserrat', sans-serif;
+  ${typography}
   font-style: normal;
   border-radius: 4px;
   background-color: rgba(103, 107, 139, 0.16);
 `;
 
 const AnimatedChevron = styled(Box)<PropsAnimatedChevron>`
-  transform: rotate(${({ shouldBeExpanded }) => (shouldBeExpanded ? '180deg' : '360deg')});
+  transform: rotate(
+    ${({ shouldBeExpanded }) => (shouldBeExpanded ? '180deg' : '360deg')}
+  );
   transform-origin: 50% 50%;
-  color: #C4C4C4;
+  color: #c4c4c4;
 `;
 
 const TitleContainer = styled(Flex)`
-  padding: 16px;
+  ${space}
   ${typography}
+  ${color}
   font-weight: 600;
   
   color: #FFFFFF;
@@ -50,14 +53,11 @@ const Title = styled(Box)`
 `;
 
 const DescriptionContainer = styled(Box)<PropsDescription>`
-  ${(props) => {
-    console.log(props.theme);
-    return 'display: block;';
-  }};
   display: ${({ shouldBeExpanded }) => (shouldBeExpanded ? 'block' : 'none')};
   border-top: 1px solid rgba(8, 13, 38, 0.48);
   font-weight: 500;
   ${color}
+  ${space}
 `;
 
 export const Accordion: React.FC<Props> = ({
@@ -77,18 +77,29 @@ export const Accordion: React.FC<Props> = ({
   const shouldBeExpanded = typeof expanded === 'boolean' ? expanded : isExpanded;
 
   return (
-    <AccordionContainer>
-      <TitleContainer p={16} flexDirection="row" fontSize={['s', 'm', 'sm']} onClick={handleToggleAccordion}>
-        <Title flexGrow={1}>{title}</Title>
+    <AccordionContainer bg="darkGreyLighten16" fontFamily="Montserrat">
+      <TitleContainer
+        p="m"
+        flexDirection="row"
+        fontSize={['s', 'm', 'm']}
+        onClick={handleToggleAccordion}
+      >
+        <Title color="white" flexGrow={1}>
+          {title}
+        </Title>
         <AnimatedChevron shouldBeExpanded={shouldBeExpanded}>
-          <Icon
-            type={Chevron}
-            size={ICON_SIZE.s}
-            // fill="#C4C4C4"
-          />
+          <Icon type={Chevron} size={ICON_SIZE.s} fill="#C4C4C4" />
         </AnimatedChevron>
       </TitleContainer>
-      <DescriptionContainer color="blackPearl" p={['16px', '16px 16px 24px', '16px 16px 24px']} shouldBeExpanded={shouldBeExpanded}>{children}</DescriptionContainer>
+      <DescriptionContainer
+        color="medianGrey"
+        px="m"
+        pt="m"
+        pb={['m', 'l', 'l']}
+        shouldBeExpanded={shouldBeExpanded}
+      >
+        {children}
+      </DescriptionContainer>
     </AccordionContainer>
   );
 };
