@@ -16,30 +16,15 @@ export default {
     medianGrey: '#A7A7C8', // description text
     darkGreyLighten16: 'rgba(103, 107, 139, 0.16)', // accordion bg
     neutralDarkGrey: '#C4C4C4', // icon
+    darkBlue: '#080D26', // page bg
+  },
+  borders: {
+    solidLight: '1px solid',
   },
   fonts: {
     Montserrat: '"Montserrat", sans-serif',
   },
   radii: {
     s: '4px',
-  },
-  borders: {
-    accordion: '1px solid blackPearlLighten48',
-  },
-  variants: {
-    primary: {
-      container: {
-        bg: 'darkGreyLighten16',
-
-      },
-      title: {
-        color: 'white',
-      },
-      content: {
-        color: 'medianGrey',
-        border: 'accordion',
-        borderRadius: 's',
-      },
-    },
   },
 };

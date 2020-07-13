@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Box } from 'reflexbox';
+import { space } from 'styled-system';
+import styled from 'styled-components';
 import { Accordion } from '../../molecules/Accordion';
 
 type Props = {
@@ -14,6 +16,10 @@ type AccordionRenderProps = {
   description: string;
 };
 
+const AccordionContainer = styled.div<any>`
+  ${space}
+`;
+
 export const AccordionGroup: React.FC<Props> = ({
   initiallyExpanded,
   content,
@@ -25,7 +31,7 @@ export const AccordionGroup: React.FC<Props> = ({
       {Array.isArray(content)
         && content.map(
           ({ id, title, description }: AccordionRenderProps, index: number) => (
-            <Box key={id} mb="m">
+            <AccordionContainer key={id} mb="m">
               <Accordion
                 title={title}
                 expanded={index === expandedIndex}
@@ -33,7 +39,7 @@ export const AccordionGroup: React.FC<Props> = ({
               >
                 <DescriptionComponent>{description}</DescriptionComponent>
               </Accordion>
-            </Box>
+            </AccordionContainer>
           ),
         )}
     </Box>

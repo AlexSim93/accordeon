@@ -2,7 +2,9 @@ import React, { useState, useCallback } from 'react';
 import { Flex, Box } from 'reflexbox';
 import noop from 'lodash/noop';
 import styled from 'styled-components';
-import { color, typography, space } from 'styled-system';
+import {
+  color, typography, space, border,
+} from 'styled-system';
 import { Chevron } from '../../../assets/icons';
 import { ICON_SIZE, Icon } from '../../atoms/Icon';
 
@@ -21,11 +23,11 @@ interface PropsDescription {
   shouldBeExpanded: boolean;
 }
 
-const AccordionContainer = styled(Box)`
+const AccordionContainer = styled(Box)<any>`
+  ${color}
   ${typography}
+  ${border}
   font-style: normal;
-  border-radius: 4px;
-  background-color: rgba(103, 107, 139, 0.16);
 `;
 
 const AnimatedChevron = styled(Box)<PropsAnimatedChevron>`
@@ -33,7 +35,6 @@ const AnimatedChevron = styled(Box)<PropsAnimatedChevron>`
     ${({ shouldBeExpanded }) => (shouldBeExpanded ? '180deg' : '360deg')}
   );
   transform-origin: 50% 50%;
-  color: #c4c4c4;
 `;
 
 const TitleContainer = styled(Flex)`
@@ -41,23 +42,18 @@ const TitleContainer = styled(Flex)`
   ${typography}
   ${color}
   font-weight: 600;
-  
-  color: #FFFFFF;
+
   &:hover {
     cursor: pointer;
   }
 `;
 
-const Title = styled(Box)`
-  margin-right: 8px;
-`;
-
-const DescriptionContainer = styled(Box)<PropsDescription>`
+const DescriptionContainer = styled(Box)<any>`
   display: ${({ shouldBeExpanded }) => (shouldBeExpanded ? 'block' : 'none')};
-  border-top: 1px solid rgba(8, 13, 38, 0.48);
-  font-weight: 500;
-  ${color}
   ${space}
+  ${color}
+  font-weight: 500;
+  ${border}
 `;
 
 export const Accordion: React.FC<Props> = ({
@@ -77,16 +73,20 @@ export const Accordion: React.FC<Props> = ({
   const shouldBeExpanded = typeof expanded === 'boolean' ? expanded : isExpanded;
 
   return (
-    <AccordionContainer bg="darkGreyLighten16" fontFamily="Montserrat">
+    <AccordionContainer
+      bg="darkGreyLighten16"
+      fontFamily="Montserrat"
+      borderRadius="s"
+    >
       <TitleContainer
         p="m"
         flexDirection="row"
         fontSize={['s', 'm', 'm']}
         onClick={handleToggleAccordion}
       >
-        <Title color="white" flexGrow={1}>
+        <Box color="white" mr="s" flexGrow={1}>
           {title}
-        </Title>
+        </Box>
         <AnimatedChevron shouldBeExpanded={shouldBeExpanded}>
           <Icon type={Chevron} size={ICON_SIZE.s} fill="#C4C4C4" />
         </AnimatedChevron>
@@ -96,6 +96,8 @@ export const Accordion: React.FC<Props> = ({
         px="m"
         pt="m"
         pb={['m', 'l', 'l']}
+        borderTop="solidLight"
+        borderColor="blackPearlLighten48"
         shouldBeExpanded={shouldBeExpanded}
       >
         {children}
