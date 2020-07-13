@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Divider renders correctly Divider with height=10 and bg="black" renders correctly 1`] = `
+<div
+  className="sc-AxjAm fEbVWD"
+  height={10}
+/>
+`;

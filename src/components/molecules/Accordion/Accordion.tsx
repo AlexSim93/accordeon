@@ -3,7 +3,7 @@ import { Flex, Box } from 'reflexbox';
 import noop from 'lodash/noop';
 import styled from 'styled-components';
 import {
-  color, typography, space, border, flexbox,
+  color, typography, space, border, flexbox, SpaceProps, ColorProps, FlexboxProps, 
 } from 'styled-system';
 import { Chevron } from '../../../assets/icons';
 import { ICON_SIZE, Icon } from '../../atoms/Icon';
@@ -49,14 +49,14 @@ const TitleContainer = styled(Flex)`
   }
 `;
 
-const DescriptionContainer = styled(Box)<any>`
+const DescriptionContainer = styled(Box)<SpaceProps & ColorProps & {shouldBeExpanded: boolean}>`
   display: ${({ shouldBeExpanded }) => (shouldBeExpanded ? 'block' : 'none')};
   ${space}
   ${color}
   font-weight: 500;
 `;
 
-const StyledTitle = styled.div<any>`
+const StyledTitle = styled.div<SpaceProps & ColorProps & FlexboxProps>`
   ${space}
   ${color}
   ${flexbox}

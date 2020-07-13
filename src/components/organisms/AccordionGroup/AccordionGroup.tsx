@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box } from 'reflexbox';
-import { space } from 'styled-system';
+import { space, SpaceProps } from 'styled-system';
 import styled from 'styled-components';
 import { Accordion } from '../../molecules/Accordion';
 
@@ -16,7 +16,7 @@ type AccordionRenderProps = {
   description: string;
 };
 
-const AccordionContainer = styled.div<any>`
+const AccordionContainer = styled.div<SpaceProps>`
   ${space}
 `;
 
