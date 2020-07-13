@@ -3,7 +3,7 @@ import { Flex, Box } from 'reflexbox';
 import noop from 'lodash/noop';
 import styled from 'styled-components';
 import {
-  color, typography, space, border, flexbox, SpaceProps, ColorProps, FlexboxProps, 
+  color, typography, space, border, flexbox, SpaceProps, ColorProps, FlexboxProps, TypographyProps, BorderProps,
 } from 'styled-system';
 import { Chevron } from '../../../assets/icons';
 import { ICON_SIZE, Icon } from '../../atoms/Icon';
@@ -24,14 +24,14 @@ interface PropsDescription {
   shouldBeExpanded: boolean;
 }
 
-const AccordionContainer = styled(Box)<any>`
+const AccordionContainer = styled(Box) <ColorProps & TypographyProps & BorderProps>`
   ${color}
   ${typography}
   ${border}
   font-style: normal;
 `;
 
-const AnimatedChevron = styled(Box)<PropsAnimatedChevron>`
+const AnimatedChevron = styled(Box) <PropsAnimatedChevron>`
   transform: rotate(
     ${({ shouldBeExpanded }) => (shouldBeExpanded ? '180deg' : '360deg')}
   );
@@ -49,7 +49,7 @@ const TitleContainer = styled(Flex)`
   }
 `;
 
-const DescriptionContainer = styled(Box)<SpaceProps & ColorProps & {shouldBeExpanded: boolean}>`
+const DescriptionContainer = styled(Box) <SpaceProps & ColorProps & PropsDescription>`
   display: ${({ shouldBeExpanded }) => (shouldBeExpanded ? 'block' : 'none')};
   ${space}
   ${color}
