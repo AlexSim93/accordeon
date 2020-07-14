@@ -12,7 +12,7 @@ type Content = {
 
 type Props = {
   initiallyExpanded?: number;
-  content?: Content;
+  content?: Content[];
   forceExpanded?: number;
   DescriptionComponent: React.FunctionComponent;
 };

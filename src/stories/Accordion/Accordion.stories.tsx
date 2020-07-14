@@ -34,7 +34,7 @@ storiesOf('Accordion', module).add(
           </Box>
           <Box mb={24}>
             <Text color="black" fontSize="l">
-              Accordion initiallyExpanded
+              Accordion initially expanded
             </Text>
             <Accordion title="simple accordion" initiallyExpanded>
               <Paragraph>
@@ -47,7 +47,7 @@ storiesOf('Accordion', module).add(
           </Box>
           <Box mb={24}>
             <Text color="black" fontSize="l">
-              Accordion external control
+              Accordion with external control
             </Text>
             <Box py={16}>
               <button type="button" onClick={() => changeState(true)}>Expand</button>
