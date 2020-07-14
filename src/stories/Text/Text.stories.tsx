@@ -18,7 +18,7 @@ storiesOf('Text', module).add(
           <Text color="black" fontSize="l">
             Default text
           </Text>
-          <Box>
+          <Box backgroundColor="black">
             <Text>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
               consectetur mollitia dicta voluptas soluta!

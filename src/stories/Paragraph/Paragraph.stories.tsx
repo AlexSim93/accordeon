@@ -19,24 +19,26 @@ storiesOf('Paragraph', module).add(
           <Text color="black" fontSize="l">
             Default paragraph
           </Text>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
-            consectetur mollitia dicta voluptas soluta! Accusantium, doloremque
-            neque, deleniti temporibus eius corporis veritatis doloribus quam
-            dolorum, impeditFaperiam? Corrupti, animi eos. Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Corporis consectetur mollitia
-            dicta voluptas soluta! Accusantium, doloremque neque, deleniti
-            temporibus eius corporis veritatis doloribus quam dolorum,
-            impeditFaperiam? Corrupti, animi eos. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Corporis consectetur mollitia dicta
-            voluptas soluta! Accusantium, doloremque neque, deleniti temporibus
-            eius corporis veritatis doloribus quam dolorum, impeditFaperiam?
-            Corrupti, animi eos. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Corporis consectetur mollitia dicta voluptas
-            soluta! Accusantium, doloremque neque, deleniti temporibus eius
-            corporis veritatis doloribus quam dolorum, impeditFaperiam?
-            Corrupti, animi eos.
-          </Paragraph>
+          <Box backgroundColor="black">
+            <Paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
+              consectetur mollitia dicta voluptas soluta! Accusantium, doloremque
+              neque, deleniti temporibus eius corporis veritatis doloribus quam
+              dolorum, impeditFaperiam? Corrupti, animi eos. Lorem ipsum dolor sit
+              amet, consectetur adipisicing elit. Corporis consectetur mollitia
+              dicta voluptas soluta! Accusantium, doloremque neque, deleniti
+              temporibus eius corporis veritatis doloribus quam dolorum,
+              impeditFaperiam? Corrupti, animi eos. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Corporis consectetur mollitia dicta
+              voluptas soluta! Accusantium, doloremque neque, deleniti temporibus
+              eius corporis veritatis doloribus quam dolorum, impeditFaperiam?
+              Corrupti, animi eos. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Corporis consectetur mollitia dicta voluptas
+              soluta! Accusantium, doloremque neque, deleniti temporibus eius
+              corporis veritatis doloribus quam dolorum, impeditFaperiam?
+              Corrupti, animi eos.
+            </Paragraph>
+          </Box>
         </Box>
         <Box mb={24}>
           <Text color="black" fontSize="l">
