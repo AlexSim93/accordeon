@@ -2,9 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Box, Flex } from 'reflexbox';
 import { ThemeProvider } from 'styled-components';
-import notes from './readme.md';
 import { Text } from '../../components/atoms/Text';
 import theme from '../../theme';
+// @ts-ignore
+import notes from './readme.md';
 
 storiesOf('Text', module).add(
   'Text',

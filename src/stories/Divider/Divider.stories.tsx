@@ -3,9 +3,10 @@ import { storiesOf } from '@storybook/react';
 import { Box, Flex } from 'reflexbox';
 import { ThemeProvider } from 'styled-components';
 import { Divider } from '../../components/atoms/Divider';
-import notes from './readme.md';
 import { Text } from '../../components/atoms/Text';
 import theme from '../../theme';
+// @ts-ignore
+import notes from './readme.md';
 
 storiesOf('Divider', module).add('Divider', () => (
   <ThemeProvider theme={theme}>

@@ -2,10 +2,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Box, Flex } from 'reflexbox';
 import { ThemeProvider } from 'styled-components';
-import notes from './readme.md';
 import { Text } from '../../components/atoms/Text';
 import theme from '../../theme';
 import { MarkDown } from '../../components/atoms/MarkDown';
+// @ts-ignore
+import notes from './readme.md';
 
 storiesOf('MarkDown', module).add(
   'MarkDown',

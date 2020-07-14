@@ -13,6 +13,7 @@ type Content = {
 type Props = {
   initiallyExpanded?: number;
   content?: Content;
+  forceExpanded?: number;
   DescriptionComponent: React.FunctionComponent;
 };
 
@@ -28,6 +29,7 @@ const AccordionContainer = styled.div<SpaceProps>`
 
 export const AccordionGroup: React.FC<Props> = ({
   initiallyExpanded,
+  forceExpanded,
   content,
   DescriptionComponent,
 }) => {
@@ -40,7 +42,7 @@ export const AccordionGroup: React.FC<Props> = ({
             <AccordionContainer key={id} mb="m">
               <Accordion
                 title={title}
-                expanded={index === expandedIndex}
+                expanded={typeof forceExpanded === 'number' ? index === forceExpanded : index === expandedIndex}
                 onToggle={(state: boolean) => changeExpandedIndex(state ? -1 : index)}
               >
                 <DescriptionComponent>{description}</DescriptionComponent>
