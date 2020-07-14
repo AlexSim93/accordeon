@@ -1,8 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Divider renders correctly Divider with height=10 and bg="black" renders correctly 1`] = `
+.c0 {
+  height: 10px;
+  background-color: black;
+}
+
 <div
-  className="sc-AxjAm fEbVWD"
+  className="c0"
   height={10}
 />
 `;

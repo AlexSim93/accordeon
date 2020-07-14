@@ -11,9 +11,9 @@ storiesOf('Divider', module).add('Divider', () => (
   <ThemeProvider theme={theme}>
     <Flex flexDirection="column">
       <Text color="black" fontWeight="600" fontSize="xl">Divider</Text>
-      <Text color="black">height=10; bg=#080D26</Text>
+      <Text color="black" fontSize="l">Divider with height=10 and background=black</Text>
       <Box>
-        <Divider height={10} bg="#080D26" />
+        <Divider height={10} bg="black" />
       </Box>
     </Flex>
   </ThemeProvider>

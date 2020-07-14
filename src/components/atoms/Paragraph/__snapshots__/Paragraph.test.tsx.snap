@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph renders correctly Paragraph renders correctly with color=white and fontFamily=Montserrat 1`] = `
+.c0 {
+  font-family: "Montserrat",sans-serif;
+  color: #FFFFFF;
+}
+
+<p
+  className="c0"
+  color="white"
+  fontFamily="Montserrat"
+/>
+`;
