@@ -69,7 +69,7 @@ export const Accordion: React.FC<Props> = ({
   const handleToggleAccordion = useCallback(() => {
     toggleAccordion(!isExpanded);
     onToggle(isExpanded);
-  }, [isExpanded]);
+  }, [isExpanded, expanded]);
 
   const shouldBeExpanded = typeof expanded === 'boolean' ? expanded : isExpanded;
 

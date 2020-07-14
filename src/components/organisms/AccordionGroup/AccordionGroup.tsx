@@ -43,7 +43,7 @@ export const AccordionGroup: React.FC<Props> = ({
               <Accordion
                 title={title}
                 expanded={typeof forceExpanded === 'number' ? index === forceExpanded : index === expandedIndex}
-                onToggle={(state: boolean) => changeExpandedIndex(state ? -1 : index)}
+                onToggle={() => changeExpandedIndex(index === expandedIndex ? -1 : index)}
               >
                 <DescriptionComponent>{description}</DescriptionComponent>
               </Accordion>
