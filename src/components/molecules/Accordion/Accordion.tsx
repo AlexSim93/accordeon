@@ -3,7 +3,14 @@ import { Flex, Box } from 'reflexbox';
 import noop from 'lodash/noop';
 import styled from 'styled-components';
 import {
-  color, typography, space, border, flexbox, SpaceProps, ColorProps, FlexboxProps, TypographyProps, BorderProps,
+  color,
+  typography,
+  space,
+  border,
+  SpaceProps,
+  ColorProps,
+  TypographyProps,
+  BorderProps,
 } from 'styled-system';
 import { Chevron } from '../../../assets/icons';
 import { ICON_SIZE, Icon } from '../../atoms/Icon';
@@ -21,22 +28,20 @@ export interface PropsAnimatedChevron {
   shouldBeExpanded: boolean;
 }
 
-interface PropsDescription {
-  shouldBeExpanded: boolean;
-}
-
-const AccordionContainer = styled(Box) <ColorProps & TypographyProps & BorderProps>`
+const AccordionContainer = styled(Box)<
+  ColorProps & TypographyProps & BorderProps
+>`
   ${color}
   ${typography}
   ${border}
   font-style: normal;
 `;
 
-const AnimatedChevron = styled(Box) <PropsAnimatedChevron>`
+const AnimatedChevron = styled(Box)<PropsAnimatedChevron>`
   transform: rotate(
     ${({ shouldBeExpanded }) => (shouldBeExpanded ? '180deg' : '360deg')}
   );
-  transition: transform 1s;
+  transition: transform 0.2s;
 `;
 
 const TitleContainer = styled(Flex)`
@@ -50,8 +55,7 @@ const TitleContainer = styled(Flex)`
   }
 `;
 
-const DescriptionContainer = styled(Box) <SpaceProps & ColorProps & PropsDescription>`
-  display: ${({ shouldBeExpanded }) => (shouldBeExpanded ? 'block' : 'none')};
+const DescriptionContainer = styled(Box)<SpaceProps & ColorProps>`
   ${space}
   ${color}
   font-weight: 500;
@@ -69,7 +73,7 @@ export const Accordion: React.FC<Props> = ({
   const handleToggleAccordion = useCallback(() => {
     toggleAccordion(!isExpanded);
     onToggle(isExpanded);
-  }, [isExpanded, expanded]);
+  }, [isExpanded, expanded, onToggle]);
 
   const shouldBeExpanded = typeof expanded === 'boolean' ? expanded : isExpanded;
 
@@ -93,15 +97,16 @@ export const Accordion: React.FC<Props> = ({
         </AnimatedChevron>
       </TitleContainer>
       {shouldBeExpanded && <Divider height={1} bg="blackPearlLighten48" />}
-      <DescriptionContainer
-        color="medianGrey"
-        px="m"
-        pt="m"
-        pb={['m', 'l', 'l']}
-        shouldBeExpanded={shouldBeExpanded}
-      >
-        {children}
-      </DescriptionContainer>
+      {shouldBeExpanded && (
+        <DescriptionContainer
+          color="medianGrey"
+          px="m"
+          pt="m"
+          pb={['m', 'l', 'l']}
+        >
+          {children}
+        </DescriptionContainer>
+      )}
     </AccordionContainer>
   );
 };
