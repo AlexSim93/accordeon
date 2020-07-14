@@ -36,7 +36,7 @@ const AnimatedChevron = styled(Box) <PropsAnimatedChevron>`
   transform: rotate(
     ${({ shouldBeExpanded }) => (shouldBeExpanded ? '180deg' : '360deg')}
   );
-  transform-origin: 50% 50%;
+  transition: transform 1s;
 `;
 
 const TitleContainer = styled(Flex)`
@@ -82,6 +82,7 @@ export const Accordion: React.FC<Props> = ({
       <TitleContainer
         p="m"
         flexDirection="row"
+        alignItems="center"
         onClick={handleToggleAccordion}
       >
         <Text color="white" fontSize={['s', 'm', 'm']} flexGrow={1}>
