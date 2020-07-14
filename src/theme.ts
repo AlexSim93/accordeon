@@ -4,6 +4,7 @@ export default {
     s: '14px',
     m: '16px',
     l: '24px',
+    xl: '32px',
   },
   space: {
     s: '8px',

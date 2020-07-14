@@ -8,6 +8,7 @@ import {
 import { Chevron } from '../../../assets/icons';
 import { ICON_SIZE, Icon } from '../../atoms/Icon';
 import { Divider } from '../../atoms/Divider';
+import { Text } from '../../atoms/Text';
 
 type Props = {
   title: string;
@@ -56,12 +57,6 @@ const DescriptionContainer = styled(Box) <SpaceProps & ColorProps & PropsDescrip
   font-weight: 500;
 `;
 
-const StyledTitle = styled.div<SpaceProps & ColorProps & FlexboxProps>`
-  ${space}
-  ${color}
-  ${flexbox}
-`;
-
 export const Accordion: React.FC<Props> = ({
   title,
   initiallyExpanded = false,
@@ -87,12 +82,11 @@ export const Accordion: React.FC<Props> = ({
       <TitleContainer
         p="m"
         flexDirection="row"
-        fontSize={['s', 'm', 'm']}
         onClick={handleToggleAccordion}
       >
-        <StyledTitle color="white" mr="s" flexGrow={1}>
+        <Text color="white" fontSize={['s', 'm', 'm']} flexGrow={1}>
           {title}
-        </StyledTitle>
+        </Text>
         <AnimatedChevron shouldBeExpanded={shouldBeExpanded}>
           <Icon type={Chevron} size={ICON_SIZE.s} fill="#C4C4C4" />
         </AnimatedChevron>

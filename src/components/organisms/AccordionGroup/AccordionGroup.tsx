@@ -4,10 +4,16 @@ import { space, SpaceProps } from 'styled-system';
 import styled from 'styled-components';
 import { Accordion } from '../../molecules/Accordion';
 
+type Content = {
+  id: string;
+  title: string;
+  description: string;
+}
+
 type Props = {
   initiallyExpanded?: number;
-  content: any;
-  DescriptionComponent: any;
+  content?: Content;
+  DescriptionComponent: React.FunctionComponent;
 };
 
 type AccordionRenderProps = {
