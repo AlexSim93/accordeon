@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordionGroup AccordionGroup should render correctly by default 1`] = `
+.c3 {
+  font-size: s;
+  font-family: Montserrat;
+  color: white;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c1 {
+  background-color: darkGreyLighten16;
+  font-family: Montserrat;
+  border-radius: s;
+  font-style: normal;
+}
+
+.c4 {
+  -webkit-transform: rotate( 360deg );
+  -ms-transform: rotate( 360deg );
+  transform: rotate( 360deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.c2 {
+  padding: m;
+  font-weight: 600;
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c0 {
+  margin-bottom: m;
+}
+
+@media screen and (min-width:40em) {
+  .c3 {
+    font-size: m;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c3 {
+    font-size: m;
+  }
+}
+
+<section
+  className="css-vurnku"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1 css-nwbphr"
+    >
+      <div
+        className="c2 css-vpgf7p"
+        onClick={[Function]}
+      >
+        <span
+          className="c3"
+          color="white"
+          fontFamily="Montserrat"
+          fontSize={
+            Array [
+              "s",
+              "m",
+              "m",
+            ]
+          }
+        >
+          accordion 1
+        </span>
+        <div
+          className="c4 css-vurnku"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1 css-nwbphr"
+    >
+      <div
+        className="c2 css-vpgf7p"
+        onClick={[Function]}
+      >
+        <span
+          className="c3"
+          color="white"
+          fontFamily="Montserrat"
+          fontSize={
+            Array [
+              "s",
+              "m",
+              "m",
+            ]
+          }
+        >
+          accordion 2
+        </span>
+        <div
+          className="c4 css-vurnku"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`AccordionGroup AccordionGroup should render correctly when forceExpanded=1 1`] = `
+.c6 {
+  height: 1px;
+  background-color: blackPearlLighten48;
+}
+
+.c3 {
+  font-size: s;
+  font-family: Montserrat;
+  color: white;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c1 {
+  background-color: darkGreyLighten16;
+  font-family: Montserrat;
+  border-radius: s;
+  font-style: normal;
+}
+
+.c4 {
+  -webkit-transform: rotate( 360deg );
+  -ms-transform: rotate( 360deg );
+  transform: rotate( 360deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.c5 {
+  -webkit-transform: rotate( 180deg );
+  -ms-transform: rotate( 180deg );
+  transform: rotate( 180deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.c2 {
+  padding: m;
+  font-weight: 600;
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c7 {
+  padding-left: m;
+  padding-right: m;
+  padding-top: m;
+  padding-bottom: m;
+  color: medianGrey;
+  font-weight: 500;
+}
+
+.c0 {
+  margin-bottom: m;
+}
+
+.c8 {
+  font-family: Montserrat;
+  color: white;
+}
+
+@media screen and (min-width:40em) {
+  .c3 {
+    font-size: m;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c3 {
+    font-size: m;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c7 {
+    padding-bottom: l;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c7 {
+    padding-bottom: l;
+  }
+}
+
+<section
+  className="css-vurnku"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1 css-nwbphr"
+    >
+      <div
+        className="c2 css-vpgf7p"
+        onClick={[Function]}
+      >
+        <span
+          className="c3"
+          color="white"
+          fontFamily="Montserrat"
+          fontSize={
+            Array [
+              "s",
+              "m",
+              "m",
+            ]
+          }
+        >
+          accordion 1
+        </span>
+        <div
+          className="c4 css-vurnku"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1 css-nwbphr"
+    >
+      <div
+        className="c2 css-vpgf7p"
+        onClick={[Function]}
+      >
+        <span
+          className="c3"
+          color="white"
+          fontFamily="Montserrat"
+          fontSize={
+            Array [
+              "s",
+              "m",
+              "m",
+            ]
+          }
+        >
+          accordion 2
+        </span>
+        <div
+          className="c5 css-vurnku"
+        />
+      </div>
+      <div
+        className="c6"
+        height={1}
+      />
+      <div
+        className="c7 css-th0e4m"
+      >
+        <p
+          className="c8"
+          color="white"
+          fontFamily="Montserrat"
+        >
+          description 2
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`AccordionGroup AccordionGroup should render correctly when initiallyExpanded=1 1`] = `
+.c6 {
+  height: 1px;
+  background-color: blackPearlLighten48;
+}
+
+.c3 {
+  font-size: s;
+  font-family: Montserrat;
+  color: white;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c1 {
+  background-color: darkGreyLighten16;
+  font-family: Montserrat;
+  border-radius: s;
+  font-style: normal;
+}
+
+.c4 {
+  -webkit-transform: rotate( 360deg );
+  -ms-transform: rotate( 360deg );
+  transform: rotate( 360deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.c5 {
+  -webkit-transform: rotate( 180deg );
+  -ms-transform: rotate( 180deg );
+  transform: rotate( 180deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.c2 {
+  padding: m;
+  font-weight: 600;
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c7 {
+  padding-left: m;
+  padding-right: m;
+  padding-top: m;
+  padding-bottom: m;
+  color: medianGrey;
+  font-weight: 500;
+}
+
+.c0 {
+  margin-bottom: m;
+}
+
+.c8 {
+  font-family: Montserrat;
+  color: white;
+}
+
+@media screen and (min-width:40em) {
+  .c3 {
+    font-size: m;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c3 {
+    font-size: m;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c7 {
+    padding-bottom: l;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c7 {
+    padding-bottom: l;
+  }
+}
+
+<section
+  className="css-vurnku"
+>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1 css-nwbphr"
+    >
+      <div
+        className="c2 css-vpgf7p"
+        onClick={[Function]}
+      >
+        <span
+          className="c3"
+          color="white"
+          fontFamily="Montserrat"
+          fontSize={
+            Array [
+              "s",
+              "m",
+              "m",
+            ]
+          }
+        >
+          accordion 1
+        </span>
+        <div
+          className="c4 css-vurnku"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1 css-nwbphr"
+    >
+      <div
+        className="c2 css-vpgf7p"
+        onClick={[Function]}
+      >
+        <span
+          className="c3"
+          color="white"
+          fontFamily="Montserrat"
+          fontSize={
+            Array [
+              "s",
+              "m",
+              "m",
+            ]
+          }
+        >
+          accordion 2
+        </span>
+        <div
+          className="c5 css-vurnku"
+        />
+      </div>
+      <div
+        className="c6"
+        height={1}
+      />
+      <div
+        className="c7 css-th0e4m"
+      >
+        <p
+          className="c8"
+          color="white"
+          fontFamily="Montserrat"
+        >
+          description 2
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;
