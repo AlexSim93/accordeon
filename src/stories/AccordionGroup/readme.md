@@ -6,7 +6,7 @@
 
 #### AccordionGroup
 
-| Свойство             | Тип TS                                            | required | default Описание |
+| Свойство             | Тип TS                                            | required | default          | Описание |
 | -------------------- | ------------------------------------------------- | -------- | ---------------- |
 | initiallyExpanded    | number                                            | ✗        | -                | индекс аккордеона, который следует раскрыть изначально |
 | forceExpanded        | number                                            | ✗        | -                | Пропса которая позволяет раскрыть аккордеон |
@@ -15,7 +15,7 @@
 
 ## Использование:
 
-- Аккордеон { initiallyExpanded=0, content=[
+- Группа аккордеонов { initiallyExpanded=0, content=[
   { id: "1", title: "accordion 1", description: "description 1" },
   { id: "2", title: "accordion 2", description: "description 2" },
   ], DescriptionComponent=Paragraph}
