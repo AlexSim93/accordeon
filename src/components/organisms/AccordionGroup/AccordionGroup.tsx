@@ -3,24 +3,19 @@ import { Box } from 'reflexbox';
 import { space, SpaceProps } from 'styled-system';
 import styled from 'styled-components';
 import { Accordion } from '../../molecules/Accordion';
+import { Paragraph } from '../../atoms/Paragraph';
 
 type Content = {
-  id: string;
-  title: string;
-  description: string;
-}
+  [key: string]: string;
+};
 
 type Props = {
   initiallyExpanded?: number;
   content?: Content[];
   forceExpanded?: number;
-  DescriptionComponent: React.FunctionComponent;
-};
-
-type AccordionRenderProps = {
-  id: string;
-  title: string;
-  description: string;
+  DescriptionComponent?: React.FunctionComponent;
+  titleKey: string;
+  descriptionKey: string;
 };
 
 const AccordionContainer = styled.div<SpaceProps>`
@@ -28,24 +23,26 @@ const AccordionContainer = styled.div<SpaceProps>`
 `;
 
 export const AccordionGroup: React.FC<Props> = ({
-  initiallyExpanded,
+  initiallyExpanded = -1,
   forceExpanded,
   content,
-  DescriptionComponent,
+  DescriptionComponent = Paragraph,
+  titleKey,
+  descriptionKey,
 }) => {
-  const [expandedIndex, changeExpandedIndex] = useState<number | undefined>(initiallyExpanded);
+  const [expandedIndex, changeExpandedIndex] = useState<number>(initiallyExpanded);
   return (
     <Box as="section">
       {Array.isArray(content)
         && content.map(
-          ({ id, title, description }: AccordionRenderProps, index: number) => (
-            <AccordionContainer key={id} mb="m">
+          (item: Content, index: number) => (
+            <AccordionContainer key={item.id} mb="m">
               <Accordion
-                title={title}
+                title={item[titleKey]}
                 expanded={typeof forceExpanded === 'number' ? index === forceExpanded : index === expandedIndex}
                 onToggle={() => changeExpandedIndex(index === expandedIndex ? -1 : index)}
               >
-                <DescriptionComponent>{description}</DescriptionComponent>
+                <DescriptionComponent>{item[descriptionKey]}</DescriptionComponent>
               </Accordion>
             </AccordionContainer>
           ),

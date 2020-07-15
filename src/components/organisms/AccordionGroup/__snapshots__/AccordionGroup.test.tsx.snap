@@ -2,9 +2,9 @@
 
 exports[`AccordionGroup AccordionGroup should render correctly by default 1`] = `
 .c3 {
-  font-size: s;
-  font-family: Montserrat;
-  color: white;
+  font-size: 14px;
+  font-family: "Montserrat",sans-serif;
+  color: #FFFFFF;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -12,9 +12,9 @@ exports[`AccordionGroup AccordionGroup should render correctly by default 1`] = 
 }
 
 .c1 {
-  background-color: darkGreyLighten16;
-  font-family: Montserrat;
-  border-radius: s;
+  background-color: rgba(103,107,139,0.16);
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4px;
   font-style: normal;
 }
 
@@ -28,7 +28,7 @@ exports[`AccordionGroup AccordionGroup should render correctly by default 1`] = 
 }
 
 .c2 {
-  padding: m;
+  padding: 16px;
   font-weight: 600;
 }
 
@@ -37,18 +37,18 @@ exports[`AccordionGroup AccordionGroup should render correctly by default 1`] = 
 }
 
 .c0 {
-  margin-bottom: m;
+  margin-bottom: 16px;
 }
 
-@media screen and (min-width:40em) {
+@media screen and (min-width:768px) {
   .c3 {
-    font-size: m;
+    font-size: 16px;
   }
 }
 
-@media screen and (min-width:52em) {
+@media screen and (min-width:1024px) {
   .c3 {
-    font-size: m;
+    font-size: 16px;
   }
 }
 
@@ -121,13 +121,13 @@ exports[`AccordionGroup AccordionGroup should render correctly by default 1`] = 
 exports[`AccordionGroup AccordionGroup should render correctly when forceExpanded=1 1`] = `
 .c6 {
   height: 1px;
-  background-color: blackPearlLighten48;
+  background-color: rgba(8,13,38,0.48);
 }
 
 .c3 {
-  font-size: s;
-  font-family: Montserrat;
-  color: white;
+  font-size: 14px;
+  font-family: "Montserrat",sans-serif;
+  color: #FFFFFF;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -135,9 +135,9 @@ exports[`AccordionGroup AccordionGroup should render correctly when forceExpande
 }
 
 .c1 {
-  background-color: darkGreyLighten16;
-  font-family: Montserrat;
-  border-radius: s;
+  background-color: rgba(103,107,139,0.16);
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4px;
   font-style: normal;
 }
 
@@ -160,7 +160,7 @@ exports[`AccordionGroup AccordionGroup should render correctly when forceExpande
 }
 
 .c2 {
-  padding: m;
+  padding: 16px;
   font-weight: 600;
 }
 
@@ -169,44 +169,44 @@ exports[`AccordionGroup AccordionGroup should render correctly when forceExpande
 }
 
 .c7 {
-  padding-left: m;
-  padding-right: m;
-  padding-top: m;
-  padding-bottom: m;
-  color: medianGrey;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: #A7A7C8;
   font-weight: 500;
 }
 
-.c0 {
-  margin-bottom: m;
-}
-
 .c8 {
-  font-family: Montserrat;
-  color: white;
+  font-family: "Montserrat",sans-serif;
+  color: #FFFFFF;
 }
 
-@media screen and (min-width:40em) {
+.c0 {
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width:768px) {
   .c3 {
-    font-size: m;
+    font-size: 16px;
   }
 }
 
-@media screen and (min-width:52em) {
+@media screen and (min-width:1024px) {
   .c3 {
-    font-size: m;
+    font-size: 16px;
   }
 }
 
-@media screen and (min-width:40em) {
+@media screen and (min-width:768px) {
   .c7 {
-    padding-bottom: l;
+    padding-bottom: 24px;
   }
 }
 
-@media screen and (min-width:52em) {
+@media screen and (min-width:1024px) {
   .c7 {
-    padding-bottom: l;
+    padding-bottom: 24px;
   }
 }
 
@@ -294,13 +294,13 @@ exports[`AccordionGroup AccordionGroup should render correctly when forceExpande
 exports[`AccordionGroup AccordionGroup should render correctly when initiallyExpanded=1 1`] = `
 .c6 {
   height: 1px;
-  background-color: blackPearlLighten48;
+  background-color: rgba(8,13,38,0.48);
 }
 
 .c3 {
-  font-size: s;
-  font-family: Montserrat;
-  color: white;
+  font-size: 14px;
+  font-family: "Montserrat",sans-serif;
+  color: #FFFFFF;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -308,9 +308,9 @@ exports[`AccordionGroup AccordionGroup should render correctly when initiallyExp
 }
 
 .c1 {
-  background-color: darkGreyLighten16;
-  font-family: Montserrat;
-  border-radius: s;
+  background-color: rgba(103,107,139,0.16);
+  font-family: "Montserrat",sans-serif;
+  border-radius: 4px;
   font-style: normal;
 }
 
@@ -333,7 +333,7 @@ exports[`AccordionGroup AccordionGroup should render correctly when initiallyExp
 }
 
 .c2 {
-  padding: m;
+  padding: 16px;
   font-weight: 600;
 }
 
@@ -342,44 +342,44 @@ exports[`AccordionGroup AccordionGroup should render correctly when initiallyExp
 }
 
 .c7 {
-  padding-left: m;
-  padding-right: m;
-  padding-top: m;
-  padding-bottom: m;
-  color: medianGrey;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: #A7A7C8;
   font-weight: 500;
 }
 
-.c0 {
-  margin-bottom: m;
-}
-
 .c8 {
-  font-family: Montserrat;
-  color: white;
+  font-family: "Montserrat",sans-serif;
+  color: #FFFFFF;
 }
 
-@media screen and (min-width:40em) {
+.c0 {
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width:768px) {
   .c3 {
-    font-size: m;
+    font-size: 16px;
   }
 }
 
-@media screen and (min-width:52em) {
+@media screen and (min-width:1024px) {
   .c3 {
-    font-size: m;
+    font-size: 16px;
   }
 }
 
-@media screen and (min-width:40em) {
+@media screen and (min-width:768px) {
   .c7 {
-    padding-bottom: l;
+    padding-bottom: 24px;
   }
 }
 
-@media screen and (min-width:52em) {
+@media screen and (min-width:1024px) {
   .c7 {
-    padding-bottom: l;
+    padding-bottom: 24px;
   }
 }
 

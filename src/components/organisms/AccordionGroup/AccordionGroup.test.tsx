@@ -4,17 +4,23 @@ import { mount } from 'enzyme';
 import 'jest-styled-components';
 import { AccordionGroup } from './AccordionGroup';
 import { Paragraph } from '../../atoms/Paragraph';
+import theme from '../../../theme';
+import { ThemeProvider } from 'styled-components';
 
 describe('AccordionGroup', () => {
   it('AccordionGroup should render correctly by default', () => {
     const accordionGroup = renderer
       .create(
-        <AccordionGroup
-          content={[
-            { id: '1', title: 'accordion 1', description: 'description 1' },
-            { id: '2', title: 'accordion 2', description: 'description 2' },
-          ]}
-        />,
+        <ThemeProvider theme={theme}>
+          <AccordionGroup
+            titleKey="title"
+            descriptionKey="description"
+            content={[
+              { id: '1', title: 'accordion 1', description: 'description 1' },
+              { id: '2', title: 'accordion 2', description: 'description 2' },
+            ]}
+          />
+        </ThemeProvider>,
       )
       .toJSON();
     expect(accordionGroup).toMatchSnapshot();
@@ -23,14 +29,18 @@ describe('AccordionGroup', () => {
   it('AccordionGroup should render correctly when initiallyExpanded=1', () => {
     const accordionGroup = renderer
       .create(
-        <AccordionGroup
-          content={[
-            { id: '1', title: 'accordion 1', description: 'description 1' },
-            { id: '2', title: 'accordion 2', description: 'description 2' },
-          ]}
-          initiallyExpanded={1}
-          DescriptionComponent={Paragraph}
-        />,
+        <ThemeProvider theme={theme}>
+          <AccordionGroup
+            titleKey="title"
+            descriptionKey="description"
+            content={[
+              { id: '1', title: 'accordion 1', description: 'description 1' },
+              { id: '2', title: 'accordion 2', description: 'description 2' },
+            ]}
+            initiallyExpanded={1}
+            DescriptionComponent={Paragraph}
+          />
+        </ThemeProvider>,
       )
       .toJSON();
     expect(accordionGroup).toMatchSnapshot();
@@ -39,14 +49,18 @@ describe('AccordionGroup', () => {
   it('AccordionGroup should render correctly when forceExpanded=1', () => {
     const accordionGroup = renderer
       .create(
-        <AccordionGroup
-          content={[
-            { id: '1', title: 'accordion 1', description: 'description 1' },
-            { id: '2', title: 'accordion 2', description: 'description 2' },
-          ]}
-          forceExpanded={1}
-          DescriptionComponent={Paragraph}
-        />,
+        <ThemeProvider theme={theme}>
+          <AccordionGroup
+            titleKey="title"
+            descriptionKey="description"
+            content={[
+              { id: '1', title: 'accordion 1', description: 'description 1' },
+              { id: '2', title: 'accordion 2', description: 'description 2' },
+            ]}
+            forceExpanded={1}
+            DescriptionComponent={Paragraph}
+          />
+        </ThemeProvider>,
       )
       .toJSON();
     expect(accordionGroup).toMatchSnapshot();
@@ -55,6 +69,8 @@ describe('AccordionGroup', () => {
   it('Accordion should expand and collapse on click', () => {
     const accordionGroup = mount(
       <AccordionGroup
+        titleKey="title"
+        descriptionKey="description"
         content={[
           { id: '1', title: 'accordion 1', description: 'description 1' },
           { id: '2', title: 'accordion 2', description: 'description 2' },

@@ -29,6 +29,8 @@ storiesOf('Accordion Group', module).add(
                 { id: '2', title: 'accordion 2', description: 'description 2' },
               ]}
               DescriptionComponent={Paragraph}
+              titleKey="title"
+              descriptionKey="description"
             />
           </Box>
           <Box mb={24}>
@@ -36,6 +38,8 @@ storiesOf('Accordion Group', module).add(
               Accordion Group initially expanded second accordion
             </Text>
             <AccordionGroup
+              titleKey="title"
+              descriptionKey="description"
               content={[
                 { id: '1', title: 'accordion 1', description: 'description 1' },
                 { id: '2', title: 'accordion 2', description: 'description 2' },
@@ -60,6 +64,8 @@ storiesOf('Accordion Group', module).add(
               </button>
             </Box>
             <AccordionGroup
+              titleKey="title"
+              descriptionKey="description"
               content={[
                 { id: '1', title: 'accordion 1', description: 'description 1' },
                 { id: '2', title: 'accordion 2', description: 'description 2' },
