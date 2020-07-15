@@ -33,7 +33,7 @@ export const AccordionGroup: React.FC<Props> = ({
   content,
   DescriptionComponent,
 }) => {
-  const [expandedIndex, changeExpandedIndex] = useState(initiallyExpanded);
+  const [expandedIndex, changeExpandedIndex] = useState<number | undefined>(initiallyExpanded);
   return (
     <Box as="section">
       {Array.isArray(content)

@@ -72,7 +72,7 @@ export const Accordion: React.FC<Props> = ({
   onToggle = noop,
   children,
 }) => {
-  const [isExpanded, toggleAccordion] = useState(initiallyExpanded);
+  const [isExpanded, toggleAccordion] = useState<boolean>(initiallyExpanded);
 
   const handleToggleAccordion = useCallback(() => {
     toggleAccordion(!isExpanded);
