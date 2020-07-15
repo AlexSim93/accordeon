@@ -1,0 +1,14 @@
+{
+    "presets": [
+      "react-app",
+      [
+        "@babel/preset-env",
+        {
+          "targets": "> 5%, not dead"
+        }
+      ]
+    ],
+    "plugins": [
+      "babel-plugin-styled-components"
+    ]
+  }

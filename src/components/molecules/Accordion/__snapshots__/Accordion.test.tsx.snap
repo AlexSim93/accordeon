@@ -1,0 +1,299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion Accordion should render correctly by default 1`] = `
+.c2 {
+  font-size: s;
+  font-family: Montserrat;
+  color: white;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 {
+  background-color: darkGreyLighten16;
+  font-family: Montserrat;
+  border-radius: s;
+  font-style: normal;
+}
+
+.c3 {
+  -webkit-transform: rotate( 360deg );
+  -ms-transform: rotate( 360deg );
+  transform: rotate( 360deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.c1 {
+  padding: m;
+  font-weight: 600;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width:40em) {
+  .c2 {
+    font-size: m;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c2 {
+    font-size: m;
+  }
+}
+
+<div
+  className="c0 css-nwbphr"
+>
+  <div
+    className="c1 css-vpgf7p"
+    onClick={[Function]}
+  >
+    <span
+      className="c2"
+      color="white"
+      fontFamily="Montserrat"
+      fontSize={
+        Array [
+          "s",
+          "m",
+          "m",
+        ]
+      }
+    >
+      title
+    </span>
+    <div
+      className="c3 css-vurnku"
+    />
+  </div>
+</div>
+`;
+
+exports[`Accordion Accordion should render correctly when expanded=true 1`] = `
+.c4 {
+  height: 1px;
+  background-color: blackPearlLighten48;
+}
+
+.c2 {
+  font-size: s;
+  font-family: Montserrat;
+  color: white;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 {
+  background-color: darkGreyLighten16;
+  font-family: Montserrat;
+  border-radius: s;
+  font-style: normal;
+}
+
+.c3 {
+  -webkit-transform: rotate( 180deg );
+  -ms-transform: rotate( 180deg );
+  transform: rotate( 180deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.c1 {
+  padding: m;
+  font-weight: 600;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c5 {
+  padding-left: m;
+  padding-right: m;
+  padding-top: m;
+  padding-bottom: m;
+  color: medianGrey;
+  font-weight: 500;
+}
+
+@media screen and (min-width:40em) {
+  .c2 {
+    font-size: m;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c2 {
+    font-size: m;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c5 {
+    padding-bottom: l;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c5 {
+    padding-bottom: l;
+  }
+}
+
+<div
+  className="c0 css-nwbphr"
+>
+  <div
+    className="c1 css-vpgf7p"
+    onClick={[Function]}
+  >
+    <span
+      className="c2"
+      color="white"
+      fontFamily="Montserrat"
+      fontSize={
+        Array [
+          "s",
+          "m",
+          "m",
+        ]
+      }
+    >
+      title
+    </span>
+    <div
+      className="c3 css-vurnku"
+    />
+  </div>
+  <div
+    className="c4"
+    height={1}
+  />
+  <div
+    className="c5 css-th0e4m"
+  >
+    Description
+  </div>
+</div>
+`;
+
+exports[`Accordion Accordion should render correctly when initiallyExpanded=true 1`] = `
+.c4 {
+  height: 1px;
+  background-color: blackPearlLighten48;
+}
+
+.c2 {
+  font-size: s;
+  font-family: Montserrat;
+  color: white;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 {
+  background-color: darkGreyLighten16;
+  font-family: Montserrat;
+  border-radius: s;
+  font-style: normal;
+}
+
+.c3 {
+  -webkit-transform: rotate( 180deg );
+  -ms-transform: rotate( 180deg );
+  transform: rotate( 180deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.c1 {
+  padding: m;
+  font-weight: 600;
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c5 {
+  padding-left: m;
+  padding-right: m;
+  padding-top: m;
+  padding-bottom: m;
+  color: medianGrey;
+  font-weight: 500;
+}
+
+@media screen and (min-width:40em) {
+  .c2 {
+    font-size: m;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c2 {
+    font-size: m;
+  }
+}
+
+@media screen and (min-width:40em) {
+  .c5 {
+    padding-bottom: l;
+  }
+}
+
+@media screen and (min-width:52em) {
+  .c5 {
+    padding-bottom: l;
+  }
+}
+
+<div
+  className="c0 css-nwbphr"
+>
+  <div
+    className="c1 css-vpgf7p"
+    onClick={[Function]}
+  >
+    <span
+      className="c2"
+      color="white"
+      fontFamily="Montserrat"
+      fontSize={
+        Array [
+          "s",
+          "m",
+          "m",
+        ]
+      }
+    >
+      title
+    </span>
+    <div
+      className="c3 css-vurnku"
+    />
+  </div>
+  <div
+    className="c4"
+    height={1}
+  />
+  <div
+    className="c5 css-th0e4m"
+  >
+    Description
+  </div>
+</div>
+`;
