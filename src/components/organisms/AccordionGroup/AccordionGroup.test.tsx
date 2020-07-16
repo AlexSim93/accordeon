@@ -38,7 +38,7 @@ describe('AccordionGroup', () => {
               { id: '2', title: 'accordion 2', description: 'description 2' },
             ]}
             initiallyExpanded={1}
-            DescriptionComponent={Paragraph}
+            descriptionComponent={Paragraph}
           />
         </ThemeProvider>,
       )
@@ -58,7 +58,7 @@ describe('AccordionGroup', () => {
               { id: '2', title: 'accordion 2', description: 'description 2' },
             ]}
             forceExpanded={1}
-            DescriptionComponent={Paragraph}
+            descriptionComponent={Paragraph}
           />
         </ThemeProvider>,
       )
@@ -75,7 +75,7 @@ describe('AccordionGroup', () => {
           { id: '1', title: 'accordion 1', description: 'description 1' },
           { id: '2', title: 'accordion 2', description: 'description 2' },
         ]}
-        DescriptionComponent={Paragraph}
+        descriptionComponent={Paragraph}
       />,
     );
 

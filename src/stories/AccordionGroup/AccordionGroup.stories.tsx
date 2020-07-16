@@ -28,7 +28,7 @@ storiesOf('Accordion Group', module).add(
                 { id: '1', title: 'accordion 1', description: 'description 1' },
                 { id: '2', title: 'accordion 2', description: 'description 2' },
               ]}
-              DescriptionComponent={Paragraph}
+              descriptionComponent={Paragraph}
               titleKey="title"
               descriptionKey="description"
             />
@@ -45,7 +45,7 @@ storiesOf('Accordion Group', module).add(
                 { id: '2', title: 'accordion 2', description: 'description 2' },
               ]}
               initiallyExpanded={1}
-              DescriptionComponent={Paragraph}
+              descriptionComponent={Paragraph}
             />
           </Box>
           <Box mb={24}>
@@ -71,7 +71,7 @@ storiesOf('Accordion Group', module).add(
                 { id: '2', title: 'accordion 2', description: 'description 2' },
               ]}
               forceExpanded={openedIndex}
-              DescriptionComponent={Paragraph}
+              descriptionComponent={Paragraph}
             />
           </Box>
         </Flex>

@@ -11,7 +11,7 @@ export const Faq = () => {
       <AccordionGroup
         content={content}
         initiallyExpanded={0}
-        DescriptionComponent={MarkDown}
+        descriptionComponent={MarkDown}
         titleKey="title"
         descriptionKey="description"
       />

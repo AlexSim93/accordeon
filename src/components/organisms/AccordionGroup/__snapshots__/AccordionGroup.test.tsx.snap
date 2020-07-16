@@ -18,15 +18,6 @@ exports[`AccordionGroup AccordionGroup should render correctly by default 1`] = 
   font-style: normal;
 }
 
-.c4 {
-  -webkit-transform: rotate( 360deg );
-  -ms-transform: rotate( 360deg );
-  transform: rotate( 360deg );
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  transition: transform 0.2s;
-}
-
 .c2 {
   padding: 16px;
   font-weight: 600;
@@ -34,6 +25,15 @@ exports[`AccordionGroup AccordionGroup should render correctly by default 1`] = 
 
 .c2:hover {
   cursor: pointer;
+}
+
+.c4 {
+  -webkit-transform: rotate( 360deg );
+  -ms-transform: rotate( 360deg );
+  transform: rotate( 360deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .c0 {
@@ -141,24 +141,6 @@ exports[`AccordionGroup AccordionGroup should render correctly when forceExpande
   font-style: normal;
 }
 
-.c4 {
-  -webkit-transform: rotate( 360deg );
-  -ms-transform: rotate( 360deg );
-  transform: rotate( 360deg );
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  transition: transform 0.2s;
-}
-
-.c5 {
-  -webkit-transform: rotate( 180deg );
-  -ms-transform: rotate( 180deg );
-  transform: rotate( 180deg );
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  transition: transform 0.2s;
-}
-
 .c2 {
   padding: 16px;
   font-weight: 600;
@@ -175,6 +157,24 @@ exports[`AccordionGroup AccordionGroup should render correctly when forceExpande
   padding-bottom: 16px;
   color: #A7A7C8;
   font-weight: 500;
+}
+
+.c4 {
+  -webkit-transform: rotate( 360deg );
+  -ms-transform: rotate( 360deg );
+  transform: rotate( 360deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.c5 {
+  -webkit-transform: rotate( 180deg );
+  -ms-transform: rotate( 180deg );
+  transform: rotate( 180deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .c8 {
@@ -314,24 +314,6 @@ exports[`AccordionGroup AccordionGroup should render correctly when initiallyExp
   font-style: normal;
 }
 
-.c4 {
-  -webkit-transform: rotate( 360deg );
-  -ms-transform: rotate( 360deg );
-  transform: rotate( 360deg );
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  transition: transform 0.2s;
-}
-
-.c5 {
-  -webkit-transform: rotate( 180deg );
-  -ms-transform: rotate( 180deg );
-  transform: rotate( 180deg );
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  transition: transform 0.2s;
-}
-
 .c2 {
   padding: 16px;
   font-weight: 600;
@@ -348,6 +330,24 @@ exports[`AccordionGroup AccordionGroup should render correctly when initiallyExp
   padding-bottom: 16px;
   color: #A7A7C8;
   font-weight: 500;
+}
+
+.c4 {
+  -webkit-transform: rotate( 360deg );
+  -ms-transform: rotate( 360deg );
+  transform: rotate( 360deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.c5 {
+  -webkit-transform: rotate( 180deg );
+  -ms-transform: rotate( 180deg );
+  transform: rotate( 180deg );
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .c8 {

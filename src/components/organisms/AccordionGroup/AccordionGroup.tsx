@@ -13,7 +13,7 @@ type Props = {
   initiallyExpanded?: number;
   content?: Content[];
   forceExpanded?: number;
-  DescriptionComponent?: React.FunctionComponent;
+  descriptionComponent?: any;
   titleKey: string;
   descriptionKey: string;
 };
@@ -26,11 +26,12 @@ export const AccordionGroup: React.FC<Props> = ({
   initiallyExpanded = -1,
   forceExpanded,
   content,
-  DescriptionComponent = Paragraph,
+  descriptionComponent = Paragraph,
   titleKey,
   descriptionKey,
 }) => {
   const [expandedIndex, changeExpandedIndex] = useState<number>(initiallyExpanded);
+  const Component = descriptionComponent;
   return (
     <Box as="section">
       {Array.isArray(content)
@@ -42,7 +43,7 @@ export const AccordionGroup: React.FC<Props> = ({
                 expanded={typeof forceExpanded === 'number' ? index === forceExpanded : index === expandedIndex}
                 onToggle={() => changeExpandedIndex(index === expandedIndex ? -1 : index)}
               >
-                <DescriptionComponent>{item[descriptionKey]}</DescriptionComponent>
+                <Component>{item[descriptionKey]}</Component>
               </Accordion>
             </AccordionContainer>
           ),
