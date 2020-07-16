@@ -1,13 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
-import { space, SpaceProps } from 'styled-system';
-import { AccordionGroup } from '../../components/organisms/AccordionGroup';
-import { useContent } from '../../utils/hooks/useContent';
-import { MarkDown } from '../../components/atoms/MarkDown';
-
-const AccordionGroupContainer = styled.div<SpaceProps>`
-  ${space}
-`;
+import { AccordionGroupContainer } from '../../components/AccordionGroupContainer';
+import { MarkDown } from '../../../../components/atoms/MarkDown';
+import { useContent } from '../../../../utils/hooks';
+import { AccordionGroup } from '../../../../components/organisms/AccordionGroup';
 
 export const Faq = () => {
   const { content } = useContent('faqs');

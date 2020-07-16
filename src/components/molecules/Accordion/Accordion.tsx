@@ -1,21 +1,13 @@
 import React, { useState, useCallback } from 'react';
-import { Flex, Box } from 'reflexbox';
 import noop from 'lodash/noop';
-import styled from 'styled-components';
-import {
-  color,
-  typography,
-  space,
-  border,
-  SpaceProps,
-  ColorProps,
-  TypographyProps,
-  BorderProps,
-} from 'styled-system';
 import { Chevron } from '../../../assets/icons';
 import { ICON_SIZE, Icon } from '../../atoms/Icon';
 import { Divider } from '../../atoms/Divider';
 import { Text } from '../../atoms/Text';
+import { AccordionContainer } from './components/AccordionContainer';
+import { TitleContainer } from './components/TitleContainer';
+import { DescriptionContainer } from './components/DecriptionContainer';
+import { AnimatedChevron } from './components/AnimatedChevron';
 
 type Props = {
   title: string;
@@ -23,47 +15,6 @@ type Props = {
   initiallyExpanded?: boolean;
   onToggle?: (state: boolean) => void;
 };
-
-export interface PropsAnimatedChevron {
-  shouldBeExpanded: boolean;
-}
-
-const AccordionContainer = styled(Box)<
-  ColorProps & TypographyProps & BorderProps
->`
-  ${color}
-  ${typography}
-  ${border}
-  font-style: normal;
-`;
-
-const AnimatedChevron = styled(Box)<PropsAnimatedChevron>`
-  transform: rotate(
-    ${({ shouldBeExpanded }) => (shouldBeExpanded ? '180deg' : '360deg')}
-  );
-  transition: transform 0.2s;
-`;
-
-const TitleContainer = styled(Flex)`
-  ${space}
-  ${typography}
-  ${color}
-  font-weight: 600;
-
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
-TitleContainer.displayName = 'TitleContainer';
-
-const DescriptionContainer = styled(Box)<SpaceProps & ColorProps>`
-  ${space}
-  ${color}
-  font-weight: 500;
-`;
-
-DescriptionContainer.displayName = 'DescriptionContainer';
 
 export const Accordion: React.FC<Props> = ({
   title,

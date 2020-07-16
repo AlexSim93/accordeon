@@ -1,14 +1,14 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import theme from './theme';
-import { Faq } from './pages/Faq';
+import { Help } from './pages/Help';
 import GlobalFont from './assets/fonts/GlobalFont';
 import GlobalStyles from './assets/styles/GlobalStyles';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Faq />
+      <Help />
       <GlobalFont />
       <GlobalStyles bg="darkBlue" />
     </ThemeProvider>
