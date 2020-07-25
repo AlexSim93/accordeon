@@ -1,12 +1,24 @@
 import React from 'react';
 import {
-  color, ColorProps, typography, TypographyProps, space, SpaceProps,
+  color,
+  ColorProps,
+  typography,
+  TypographyProps,
+  space,
+  SpaceProps,
+  flexbox,
+  FlexboxProps,
 } from 'styled-system';
 import styled from 'styled-components';
 
-export const Caption = styled.span<ColorProps & TypographyProps & SpaceProps & {line?: 'none' | 'both' | 'right' | 'left'}>`
+export const Caption = styled.span<
+  ColorProps &
+    TypographyProps &
+    SpaceProps &
+    FlexboxProps & { line: Array<'none' | 'both' | 'right' | 'left'> }
+>`
     &::before {
-        display: ${({ line }) => ((line === 'left' || line === 'both') ? 'inline-block' : 'none')};
+        display: ${({ line }) => (line[0] === 'left' || line[0] === 'both' ? 'inline-block' : 'none')};
         content: '';
         margin-right: 24px;
         vertical-align: middle;
@@ -16,7 +28,7 @@ export const Caption = styled.span<ColorProps & TypographyProps & SpaceProps & {
     }
     &::after {
         width: 40px;
-        display: ${({ line }) => ((line === 'right' || line === 'both') ? 'inline-block' : 'none')};
+        display: ${({ line }) => (line[0] === 'right' || line[0] === 'both' ? 'inline-block' : 'none')};
         content: '';
         margin-left: 24px;
         vertical-align: middle;
@@ -27,5 +39,14 @@ export const Caption = styled.span<ColorProps & TypographyProps & SpaceProps & {
     ${color}
     ${typography}
     ${space}
-
+    ${flexbox}
 `;
+
+Caption.defaultProps = {
+  fontFamily: 'Montserrat',
+  color: 'dodgerBlue',
+  fontSize: 'xs',
+  fontWeight: 'bold',
+};
+
+Caption.displayName = 'Caption';

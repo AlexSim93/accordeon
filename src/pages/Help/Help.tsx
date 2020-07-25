@@ -1,39 +1,43 @@
 import React from 'react';
-import { Box } from 'reflexbox';
-import { Faq } from './containers/Faq';
-import { Paragraph } from '../../components/atoms/Paragraph';
-import { Button } from '../../components/atoms/Button';
-import { Caption } from '../../components/atoms/Caption';
-import { Rate } from '../../components/atoms/Rate';
+import styled from 'styled-components';
+import {
+  space, SpaceProps, grid, GridProps,
+} from 'styled-system';
+import { WorkWithOvergear } from './components/WorkWithOvergear';
+import { FromNowOn } from './components/FromNowOn';
+import { GetUsedTo } from './components/GetUsedTo';
+
+const PageContainer = styled.main<SpaceProps & GridProps>`
+  display: grid;
+  justify-content: center;
+  column-gap: 32px;
+  ${space}
+  ${grid}
+`;
 
 export const Help = () => (
-  <Box>
-    <Paragraph p="m">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat amet
-      culpa quia commodi delectus in asperiores, facilis, repudiandae rem illum
-      vero aliquid exercitationem repellendus adipisci odit beatae ipsam quidem
-      minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-      quaerat iste, nobis omnis delectus quasi? Temporibus, atque? Ipsa
-      blanditiis dolor accusantium, facere quo nostrum expedita excepturi
-      voluptatem tempore aut eligendi?
-    </Paragraph>
-    <Button
-      py={16}
-      px={16}
-      color="white"
-      backgroundColor="dodgerBlue"
-      borderRadius="s"
-      border="0"
-      textAlign="center"
-      fontFamily="Montserrat"
-      fontWeight="bold"
-      fontSize="m"
-      width={192}
-    >
-      Apply Now
-    </Button>
-    <Caption color="dodgerBlue" fontSize="xs" line="left" fontWeight="bold" fontFamily="Montserrat">work with overgear</Caption>
-    <Rate rate={5} />
-    <Faq />
-  </Box>
+  <PageContainer
+    gridTemplateColumns={['288px', 'repeat(6, 80px)', 'repeat(12, 64px)']}
+    gridTemplateAreas={[
+      '"workWithOvergear" "workWithOvergearImage" "fromNowOnImage" "fromNowOnInfo" "fromNowOnAccordeon" "getUsedImg" "getUsedInfo" "getUsedAccordeon"',
+      `
+        "workWithOvergear workWithOvergear workWithOvergear workWithOvergear workWithOvergearImage workWithOvergearImage" 
+        "fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnInfo fromNowOnInfo fromNowOnInfo" 
+        "fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon"
+        "getUsedInfo getUsedInfo getUsedInfo getUsedImg getUsedImg getUsedImg"
+        "getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon"
+      `,
+      `
+        "workWithOvergear workWithOvergear workWithOvergear workWithOvergear workWithOvergear workWithOvergear workWithOvergear workWithOvergearImage workWithOvergearImage workWithOvergearImage workWithOvergearImage workWithOvergearImage"
+        "fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnInfo fromNowOnInfo fromNowOnInfo fromNowOnInfo fromNowOnInfo fromNowOnInfo"
+        "fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon"
+        "getUsedInfo getUsedInfo getUsedInfo getUsedInfo getUsedInfo getUsedInfo getUsedImg getUsedImg getUsedImg getUsedImg getUsedImg getUsedImg"
+        "getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedImg getUsedImg getUsedImg getUsedImg getUsedImg getUsedImg"
+      `,
+    ]}
+  >
+    <WorkWithOvergear />
+    <FromNowOn />
+    <GetUsedTo />
+  </PageContainer>
 );

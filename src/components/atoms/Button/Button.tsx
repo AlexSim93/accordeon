@@ -25,3 +25,18 @@ export const Button = styled.button<
     cursor: pointer;
   }
 `;
+
+Button.defaultProps = {
+  color: 'white',
+  backgroundColor: 'dodgerBlue',
+  borderRadius: 's',
+  border: '0',
+  textAlign: 'center',
+  fontFamily: 'Montserrat',
+  fontWeight: 'bold',
+  fontSize: 'm',
+  width: '192px',
+  p: '16px',
+};
+
+Button.displayName = 'Button';
