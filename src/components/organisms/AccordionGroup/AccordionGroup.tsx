@@ -37,7 +37,7 @@ export const AccordionGroup: React.FC<Props> = ({
       {Array.isArray(content)
         && content.map(
           (item: Content, index: number) => (
-            <AccordionContainer key={item.id} mb="m">
+            <AccordionContainer key={item.id} mb="xs">
               <Accordion
                 title={item[titleKey]}
                 expanded={typeof forceExpanded === 'number' ? index === forceExpanded : index === expandedIndex}

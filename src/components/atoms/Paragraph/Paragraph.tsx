@@ -11,7 +11,7 @@ export const Paragraph = styled.p<SpaceProps & TypographyProps & ColorProps>`
 
 Paragraph.defaultProps = {
   fontFamily: 'Montserrat',
-  color: 'white',
+  color: 'medianGrey',
 };
 
 Paragraph.displayName = 'Paragraph';

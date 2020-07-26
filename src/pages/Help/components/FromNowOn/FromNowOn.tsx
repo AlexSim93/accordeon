@@ -1,7 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  SpaceProps, GridProps, grid, space,
+  SpaceProps,
+  GridProps,
+  grid,
+  space,
+  position,
+  layout,
+  LayoutProps,
+  PositionProps,
 } from 'styled-system';
 import { Caption } from '../../../../components/atoms/Caption';
 import { Paragraph } from '../../../../components/atoms/Paragraph';
@@ -10,7 +17,7 @@ import { AccordionGroup } from '../../../../components/organisms/AccordionGroup'
 
 import Image from '../../../../assets/images/slide2.png';
 
-const FromNowOnContainer = styled.main<SpaceProps & GridProps>`
+const FromNowOnContainer = styled.section<SpaceProps & GridProps>`
   display: grid;
   justify-content: center;
   column-gap: 32px;
@@ -18,15 +25,23 @@ const FromNowOnContainer = styled.main<SpaceProps & GridProps>`
   ${grid}
 `;
 
-const ImageContainer = styled.img<any>`
+const ImageContainer = styled.img<PositionProps & LayoutProps & any>`
   grid-area: fromNowOnImage;
+  position: relative;
+  z-index: -1;
+  ${position}
+  ${layout}
+  ${space}
 `;
 
 const InfoContainer = styled.section`
   grid-area: fromNowOnInfo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
-const AccordeonContainer = styled.section`
+const AccordeonContainer = styled.div`
   grid-area: fromNowOnAccordeon;
 `;
 
@@ -62,13 +77,37 @@ export const FromNowOn = () => (
         "fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon"
       `,
     ]}
-    mb={[56, 72, 200]}
+    mb={['l', 'xxl', 'xxxxl']}
   >
-    <ImageContainer width={['100%', '100%', 640]} src={Image} />
+    <ImageContainer
+      mx={['auto', 0, 0]}
+      width={[263, 360, 652]}
+      left={[0, '-32px', -100]}
+      src={Image}
+    />
     <InfoContainer>
-      <Caption mb={[8, 12, 24]} line={['none', 'none', 'left']}>From now on</Caption>
-      <Text as="h2" mb={[16, 24, 24]}>Play your favourite Games and Get Paid for it</Text>
-      <Paragraph mb={[24, 64, 48]} color="medianGrey">
+      <Caption
+        mb={['xxxs', 'xxs', 's']}
+        fontSize={['xxs', 'xs', 'xs']}
+        line={['none', 'none', 'left']}
+      >
+        From now on
+      </Caption>
+      <Text
+        as="h2"
+        fontSize={['l', 'xl', 'xxl']}
+        fontWeight="bold"
+        mb={['xs', 's', 's']}
+        mt={0}
+      >
+        Play your favourite Games and Get Paid for it
+      </Text>
+      <Paragraph
+        mb={['s', 'xl', 'ml']}
+        fontSize={['s', 'm', 'm']}
+        mt={0}
+        color="medianGrey"
+      >
         This is a dream remote job unlike any other. Take an order, do your best
         and complete the order - profit!
       </Paragraph>

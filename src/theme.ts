@@ -1,6 +1,9 @@
+const breakpoints = ['768px', '1024px', '1440px'];
+
 export default {
-  breakpoints: ['768px', '1024px', '1440px'],
+  breakpoints,
   fontSizes: {
+    xxs: '10px',
     xs: '12px',
     s: '14px',
     m: '16px',
@@ -10,10 +13,25 @@ export default {
     xxl: '40px',
     xxxl: '56px',
   },
-  space: {
-    s: '8px',
-    m: '16px',
-    l: '24px',
+  space: { // s 8, m 16, l 24
+    xxxxs: '4px',
+    xxxs: '8px',
+    xxs: '12px',
+    xs: '16px',
+    s: '24px',
+    sm: '32px',
+    m: '40px',
+    ml: '48px',
+    l: '56px',
+    xl: '64px',
+    xxl: '72px',
+    xxxl: '140px',
+    xxxxl: '200px',
+  },
+  mediaQueries: {
+    small: `@media screen and (min-width: ${breakpoints[0]})`,
+    medium: `@media screen and (min-width: ${breakpoints[1]})`,
+    large: `@media screen and (min-width: ${breakpoints[2]})`,
   },
   colors: {
     white: '#FFFFFF', // title text

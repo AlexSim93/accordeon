@@ -36,7 +36,7 @@ Button.defaultProps = {
   fontWeight: 'bold',
   fontSize: 'm',
   width: '192px',
-  p: '16px',
+  p: 'xs',
 };
 
 Button.displayName = 'Button';

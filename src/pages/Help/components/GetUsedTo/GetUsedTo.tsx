@@ -1,7 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  space, SpaceProps, GridProps, grid,
+  space,
+  SpaceProps,
+  GridProps,
+  grid,
+  layout,
+  position,
 } from 'styled-system';
 import { Caption } from '../../../../components/atoms/Caption';
 import { Paragraph } from '../../../../components/atoms/Paragraph';
@@ -10,7 +15,7 @@ import { AccordionGroup } from '../../../../components/organisms/AccordionGroup'
 
 import Image from '../../../../assets/images/slide3.png';
 
-const GetUsedToContainer = styled.main<SpaceProps & GridProps>`
+const GetUsedToContainer = styled.section<SpaceProps & GridProps>`
   display: grid;
   justify-content: center;
   column-gap: 32px;
@@ -20,13 +25,20 @@ const GetUsedToContainer = styled.main<SpaceProps & GridProps>`
 
 const ImageContainer = styled.img<any>`
   grid-area: getUsedImg;
+  position: relative;
+  z-index: -1;
+  ${layout}
+  ${position}
 `;
 
 const InfoContainer = styled.section`
   grid-area: getUsedInfo;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
-const AccordeonContainer = styled.section`
+const AccordeonContainer = styled.div`
   grid-area: getUsedAccordeon;
 `;
 
@@ -63,15 +75,30 @@ export const GetUsedTo = () => (
     `,
     ]}
   >
-    <ImageContainer width={['100%', '100%', 640]} src={Image} />
+    <ImageContainer width={[288, 390, 640]} left={[0, -52, -96]} src={Image} />
     <InfoContainer>
-      <Caption mb={[8, 12, 24]} line={['none', 'none', 'left']}>
+      <Caption
+        mb={['xxxs', 'xxs', 's']}
+        fontSize={['xxs', 'xs', 'xs']}
+        line={['none', 'none', 'left']}
+      >
         Get used to
       </Caption>
-      <Text as="h2" mb={[16, 24, 24]}>
+      <Text
+        as="h2"
+        mb={['xs', 's', 's']}
+        fontSize={['l', 'xl', 'xxl']}
+        fontWeight="bold"
+        mt={0}
+      >
         Stable Income Without Hassle
       </Text>
-      <Paragraph mb={[24, 64, 48]} color="medianGrey">
+      <Paragraph
+        mb={['s', 'xl', 'ml']}
+        fontSize={['s', 'm', 'm']}
+        mt={0}
+        color="medianGrey"
+      >
         Do what you like, we will take care of the rest. Our platform and our
         staff will make your work smooth and easy. Just follow our simple rules
         and instructions.

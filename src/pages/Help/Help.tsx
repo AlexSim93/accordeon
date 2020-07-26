@@ -5,7 +5,7 @@ import { FromNowOn } from './components/FromNowOn';
 import { GetUsedTo } from './components/GetUsedTo';
 
 export const Help = () => (
-  <Box>
+  <Box as="main">
     <WorkWithOvergear />
     <FromNowOn />
     <GetUsedTo />

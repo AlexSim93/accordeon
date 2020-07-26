@@ -11,14 +11,23 @@ import {
 } from 'styled-system';
 import styled from 'styled-components';
 
+type Line = 'none' | 'both' | 'right' | 'left';
+
 export const Caption = styled.span<
   ColorProps &
     TypographyProps &
     SpaceProps &
-    FlexboxProps & { line: Array<'none' | 'both' | 'right' | 'left'> }
+    FlexboxProps & { line: Array<Line> | Line}
 >`
     &::before {
-        display: ${({ line }) => (line[0] === 'left' || line[0] === 'both' ? 'inline-block' : 'none')};
+      display: ${({ line }) => (line[0] === 'left' || line[0] === 'both' ? 'inline-block' : 'none')};
+      ${({ theme }) => theme.mediaQueries.medium}{
+        display: ${({ line }) => (line[1] === 'left' || line[1] === 'both' ? 'inline-block' : 'none')};
+      }
+      ${({ theme }) => theme.mediaQueries.large}{
+        display: ${({ line }) => (line[2] === 'left' || line[2] === 'both' ? 'inline-block' : 'none')};
+      }
+        
         content: '';
         margin-right: 24px;
         vertical-align: middle;
@@ -29,6 +38,13 @@ export const Caption = styled.span<
     &::after {
         width: 40px;
         display: ${({ line }) => (line[0] === 'right' || line[0] === 'both' ? 'inline-block' : 'none')};
+
+        ${({ theme }) => theme.mediaQueries.medium}{
+          display: ${({ line }) => (line[1] === 'right' || line[1] === 'both' ? 'inline-block' : 'none')};
+        }
+        ${({ theme }) => theme.mediaQueries.large}{
+          display: ${({ line }) => (line[2] === 'right' || line[2] === 'both' ? 'inline-block' : 'none')};
+        }
         content: '';
         margin-left: 24px;
         vertical-align: middle;

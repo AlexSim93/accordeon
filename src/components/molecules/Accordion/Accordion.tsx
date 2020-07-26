@@ -39,7 +39,7 @@ export const Accordion: React.FC<Props> = ({
       borderRadius="s"
     >
       <TitleContainer
-        p="m"
+        p="xs"
         flexDirection="row"
         alignItems="center"
         onClick={handleToggleAccordion}
@@ -55,9 +55,9 @@ export const Accordion: React.FC<Props> = ({
       {shouldBeExpanded && (
         <DescriptionContainer
           color="medianGrey"
-          px="m"
-          pt="m"
-          pb={['m', 'l', 'l']}
+          px="xs"
+          pt="xs"
+          pb={['xs', 's', 's']}
         >
           {children}
         </DescriptionContainer>
