@@ -1,11 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  space, SpaceProps, GridProps, grid,
+} from 'styled-system';
 import { Caption } from '../../../../components/atoms/Caption';
 import { Paragraph } from '../../../../components/atoms/Paragraph';
 import { Text } from '../../../../components/atoms/Text';
 import { AccordionGroup } from '../../../../components/organisms/AccordionGroup';
 
-const ImageContainer = styled.figure`
+import Image from '../../../../assets/images/slide3.png';
+
+const GetUsedToContainer = styled.main<SpaceProps & GridProps>`
+  display: grid;
+  justify-content: center;
+  column-gap: 32px;
+  ${space}
+  ${grid}
+`;
+
+const ImageContainer = styled.img<any>`
   grid-area: getUsedImg;
 `;
 
@@ -36,8 +49,21 @@ const content = [
 ];
 
 export const GetUsedTo = () => (
-  <>
-    <ImageContainer />
+  <GetUsedToContainer
+    gridTemplateColumns={['288px', 'repeat(6, 80px)', 'repeat(12, 64px)']}
+    gridTemplateAreas={[
+      '"getUsedImg" "getUsedInfo" "getUsedAccordeon"',
+      `
+      "getUsedInfo getUsedInfo getUsedInfo getUsedImg getUsedImg getUsedImg"
+      "getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon"
+    `,
+      `
+      "getUsedInfo getUsedInfo getUsedInfo getUsedInfo getUsedInfo getUsedInfo getUsedImg getUsedImg getUsedImg getUsedImg getUsedImg getUsedImg"
+      "getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedAccordeon getUsedImg getUsedImg getUsedImg getUsedImg getUsedImg getUsedImg"
+    `,
+    ]}
+  >
+    <ImageContainer width={['100%', '100%', 640]} src={Image} />
     <InfoContainer>
       <Caption mb={[8, 12, 24]} line={['none', 'none', 'left']}>
         Get used to
@@ -60,5 +86,5 @@ export const GetUsedTo = () => (
         descriptionKey="description"
       />
     </AccordeonContainer>
-  </>
+  </GetUsedToContainer>
 );

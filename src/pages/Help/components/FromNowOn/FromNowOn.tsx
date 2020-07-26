@@ -1,11 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  SpaceProps, GridProps, grid, space,
+} from 'styled-system';
 import { Caption } from '../../../../components/atoms/Caption';
 import { Paragraph } from '../../../../components/atoms/Paragraph';
 import { Text } from '../../../../components/atoms/Text';
 import { AccordionGroup } from '../../../../components/organisms/AccordionGroup';
 
-const ImageContainer = styled.figure`
+import Image from '../../../../assets/images/slide2.png';
+
+const FromNowOnContainer = styled.main<SpaceProps & GridProps>`
+  display: grid;
+  justify-content: center;
+  column-gap: 32px;
+  ${space}
+  ${grid}
+`;
+
+const ImageContainer = styled.img<any>`
   grid-area: fromNowOnImage;
 `;
 
@@ -36,8 +49,22 @@ const content = [
 ];
 
 export const FromNowOn = () => (
-  <>
-    <ImageContainer />
+  <FromNowOnContainer
+    gridTemplateColumns={['288px', 'repeat(6, 80px)', 'repeat(12, 64px)']}
+    gridTemplateAreas={[
+      '"fromNowOnImage" "fromNowOnInfo" "fromNowOnAccordeon"',
+      `
+        "fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnInfo fromNowOnInfo fromNowOnInfo" 
+        "fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon"
+      `,
+      `
+        "fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnInfo fromNowOnInfo fromNowOnInfo fromNowOnInfo fromNowOnInfo fromNowOnInfo"
+        "fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnImage fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon fromNowOnAccordeon"
+      `,
+    ]}
+    mb={[56, 72, 200]}
+  >
+    <ImageContainer width={['100%', '100%', 640]} src={Image} />
     <InfoContainer>
       <Caption mb={[8, 12, 24]} line={['none', 'none', 'left']}>From now on</Caption>
       <Text as="h2" mb={[16, 24, 24]}>Play your favourite Games and Get Paid for it</Text>
@@ -55,5 +82,5 @@ export const FromNowOn = () => (
         descriptionKey="description"
       />
     </AccordeonContainer>
-  </>
+  </FromNowOnContainer>
 );
