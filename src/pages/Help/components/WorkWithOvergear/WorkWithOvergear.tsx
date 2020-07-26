@@ -80,6 +80,7 @@ export const WorkWithOvergear = () => (
         alignSelf={['center', 'flex-start', 'flex-start']}
         fontSize={['l', 'xl', 'xxxl']}
         fontWeight={['bold', 'bold', '800']}
+        textAlign={['center', 'left', 'left']}
       >
         Share your experience with gamers worldwide
       </Text>
@@ -116,6 +117,6 @@ export const WorkWithOvergear = () => (
         </Flex>
       </RateContainer>
     </WorkWithOvergearDescription>
-    <WorkWithOvergearImage src={Image} width={[288, 336, 640]} left={['calc((288px - 100vw) / 2)', -132, -96]} />
+    <WorkWithOvergearImage src={Image} width={[288, 336, 640]} left={[0, -132, -96]} />
   </WorkWithOvergearContainer>
 );
