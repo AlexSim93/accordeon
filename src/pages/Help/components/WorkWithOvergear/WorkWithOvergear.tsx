@@ -82,7 +82,7 @@ export const WorkWithOvergear = () => (
         fontWeight={['bold', 'bold', '800']}
         textAlign={['center', 'left', 'left']}
       >
-        Share your experience with gamers worldwide
+        Share your experience&nbsp;with gamers worldwide
       </Text>
       <Paragraph
         mb={['sm', 's', 'ml']}

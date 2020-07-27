@@ -81,7 +81,7 @@ export const FromNowOn = () => (
   >
     <ImageContainer
       mx={['auto', 0, 0]}
-      width={[263, 360, 652]}
+      width={[263, 360, 752]}
       left={[0, '-32px', -100]}
       src={Image}
     />
@@ -100,7 +100,7 @@ export const FromNowOn = () => (
         mb={['xs', 's', 's']}
         mt={0}
       >
-        Play Your Favourite Games and Get Paid for it
+        Play Your Favorite Games and Get Paid for it
       </Text>
       <Paragraph
         mb={['s', 'xl', 'ml']}

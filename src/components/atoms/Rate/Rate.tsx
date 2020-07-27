@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SpaceProps, space } from 'styled-system';
+import {
+  SpaceProps, space,
+} from 'styled-system';
 import { Icon, ICON_SIZE } from '../Icon';
 import { Star } from '../../../assets/icons';
 
-const Container = styled.div`
+const Container = styled.div<SpaceProps>`
     display: flex;
     flex-direction: row;
     align-items: center;
