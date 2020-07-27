@@ -99,6 +99,7 @@ export const FromNowOn = () => (
         fontWeight="bold"
         mb={['xs', 's', 's']}
         mt={0}
+        lineHeight={['117%', '120%', '120%']}
       >
         Play Your Favorite Games and Get Paid for it
       </Text>
@@ -107,6 +108,7 @@ export const FromNowOn = () => (
         fontSize={['s', 'm', 'm']}
         mt={0}
         color="medianGrey"
+        lineHeight={['143%', '150%', '150%']}
       >
         This is a dream remote job unlike any other. Take an order, do your best
         and complete the order &mdash; profit!

@@ -90,6 +90,7 @@ export const GetUsedTo = () => (
         fontSize={['l', 'xl', 'xxl']}
         fontWeight="bold"
         mt={0}
+        lineHeight={['117%', '120%', '120%']}
       >
         Stable Income Without Hassle
       </Text>
@@ -98,6 +99,7 @@ export const GetUsedTo = () => (
         fontSize={['s', 'm', 'm']}
         mt={0}
         color="medianGrey"
+        lineHeight={['143%', '150%', '150%']}
       >
         Do what you like, we will take care of the rest. Our platform and our
         staff will make your work smooth and easy. Just follow our simple rules

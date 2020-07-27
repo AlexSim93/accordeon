@@ -81,6 +81,7 @@ export const WorkWithOvergear = () => (
         fontSize={['l', 'xl', 'xxxl']}
         fontWeight={['bold', 'bold', '800']}
         textAlign={['center', 'left', 'left']}
+        lineHeight={['117%', '112%', '107%']}
       >
         Share your experience&nbsp;with gamers worldwide
       </Text>
@@ -91,6 +92,7 @@ export const WorkWithOvergear = () => (
         color="medianGrey"
         fontSize={['s', 'm', 'ml']}
         fontWeight="500"
+        lineHeight={['143%', '150%', '140%']}
       >
         Bring even more value to playing your favourite games, get a stable
         income, and help others achieve their goals.
@@ -107,7 +109,7 @@ export const WorkWithOvergear = () => (
           alignItems={['center', 'flex-start', 'flex-start']}
         >
           <Rate rate={5} mb="xxxs" />
-          <Text mx={['auto', 0, 0]} fontSize="xs" color="medianGrey" fontWeight="500">
+          <Text mx={['auto', 0, 0]} fontSize="xs" color="medianGrey" fontWeight="500" lineHeight="133%">
             Rated
             {' '}
             <Text as="strong" color="medianGrey">5</Text>
