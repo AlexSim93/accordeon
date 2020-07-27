@@ -100,7 +100,7 @@ export const FromNowOn = () => (
         mb={['xs', 's', 's']}
         mt={0}
       >
-        Play your favourite Games and Get Paid for it
+        Play Your Favourite Games and Get Paid for it
       </Text>
       <Paragraph
         mb={['s', 'xl', 'ml']}
@@ -109,7 +109,7 @@ export const FromNowOn = () => (
         color="medianGrey"
       >
         This is a dream remote job unlike any other. Take an order, do your best
-        and complete the order - profit!
+        and complete the order &mdash; profit!
       </Paragraph>
     </InfoContainer>
     <AccordeonContainer>

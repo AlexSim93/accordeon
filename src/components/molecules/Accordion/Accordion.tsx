@@ -44,11 +44,11 @@ export const Accordion: React.FC<Props> = ({
         alignItems="center"
         onClick={handleToggleAccordion}
       >
-        <Text color="white" fontSize={['s', 'm', 'm']} flexGrow={1}>
+        <Text color="white" fontSize="m" flexGrow={1}>
           {title}
         </Text>
         <AnimatedChevron shouldBeExpanded={shouldBeExpanded}>
-          <Icon type={Chevron} size={ICON_SIZE.s} fill="#C4C4C4" />
+          <Icon type={Chevron} size={ICON_SIZE.s} fill="#676B8B" />
         </AnimatedChevron>
       </TitleContainer>
       {shouldBeExpanded && <Divider height={1} bg="blackPearlLighten48" />}

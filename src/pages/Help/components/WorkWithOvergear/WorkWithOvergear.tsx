@@ -66,7 +66,7 @@ export const WorkWithOvergear = () => (
   >
     <WorkWithOvergearDescription pt={['xs', 'xl', 'xxxl']}>
       <Caption
-        line={['none', 'none', 'left']}
+        line={['none', 'left', 'left']}
         mb={['xxxs', 'xs', 'sm']}
         alignSelf={['center', 'flex-start', 'flex-start']}
         fontSize={['xxs', 'xs', 'xs']}
@@ -108,7 +108,11 @@ export const WorkWithOvergear = () => (
         >
           <Rate rate={5} mb="xxxs" />
           <Text fontSize="xs" color="medianGrey" fontWeight="500">
-            Rated 5 stars on
+            Rated
+            {' '}
+            <Text as="strong" color="medianGrey">5</Text>
+            {' '}
+            stars on
             {' '}
             <Text as="a" href="#" color="medianGrey">
               Trustpilot
