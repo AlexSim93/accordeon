@@ -21,7 +21,7 @@ const StarContainer = styled.div`
 `;
 
 export const Rate = ({ rate, ...rest }: { rate: number } & SpaceProps) => (
-  <Container {...rest}>
+  <Container {...rest} mx={['auto', 0, 0]}>
     {Array.from(Array(Math.floor(rate))).map(() => (
       <StarContainer><Icon type={Star} size={ICON_SIZE.s} fill="#00B67A" /></StarContainer>
     ))}

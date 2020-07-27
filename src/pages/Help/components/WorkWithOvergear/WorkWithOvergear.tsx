@@ -107,7 +107,7 @@ export const WorkWithOvergear = () => (
           alignItems={['center', 'flex-start', 'flex-start']}
         >
           <Rate rate={5} mb="xxxs" />
-          <Text fontSize="xs" color="medianGrey" fontWeight="500">
+          <Text mx={['auto', 0, 0]} fontSize="xs" color="medianGrey" fontWeight="500">
             Rated
             {' '}
             <Text as="strong" color="medianGrey">5</Text>
