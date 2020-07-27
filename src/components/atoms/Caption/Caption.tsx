@@ -21,10 +21,10 @@ export const Caption = styled.span<
 >`
     &::before {
       display: ${({ line }) => (line[0] === 'left' || line[0] === 'both' ? 'inline-block' : 'none')};
-      ${({ theme }) => theme.mediaQueries.medium}{
+      ${({ theme }) => theme.mediaQueries.small}{
         display: ${({ line }) => (line[1] === 'left' || line[1] === 'both' ? 'inline-block' : 'none')};
       }
-      ${({ theme }) => theme.mediaQueries.large}{
+      ${({ theme }) => theme.mediaQueries.medium}{
         display: ${({ line }) => (line[2] === 'left' || line[2] === 'both' ? 'inline-block' : 'none')};
       }
         
@@ -39,10 +39,10 @@ export const Caption = styled.span<
         width: 40px;
         display: ${({ line }) => (line[0] === 'right' || line[0] === 'both' ? 'inline-block' : 'none')};
 
-        ${({ theme }) => theme.mediaQueries.medium}{
+        ${({ theme }) => theme.mediaQueries.small}{
           display: ${({ line }) => (line[1] === 'right' || line[1] === 'both' ? 'inline-block' : 'none')};
         }
-        ${({ theme }) => theme.mediaQueries.large}{
+        ${({ theme }) => theme.mediaQueries.medium}{
           display: ${({ line }) => (line[2] === 'right' || line[2] === 'both' ? 'inline-block' : 'none')};
         }
         content: '';

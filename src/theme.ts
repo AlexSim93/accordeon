@@ -1,4 +1,4 @@
-const breakpoints = ['768px', '1024px', '1440px'];
+const breakpoints = ['768px', '1440px'];
 
 export default {
   breakpoints,
@@ -31,7 +31,6 @@ export default {
   mediaQueries: {
     small: `@media screen and (min-width: ${breakpoints[0]})`,
     medium: `@media screen and (min-width: ${breakpoints[1]})`,
-    large: `@media screen and (min-width: ${breakpoints[2]})`,
   },
   colors: {
     white: '#FFFFFF', // title text
